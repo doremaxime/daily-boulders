@@ -4,7 +4,6 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 const store = require('../store');
-const gameEngine = require('../gameEngine');
 
 const onSignUp = function (event) {
   event.preventDefault();
@@ -59,15 +58,6 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);
   $('#sign-out').on('submit', onSignOut);
-  $('#0').on('click', gameEngine.upDateBoards);
-  $('#1').on('click', gameEngine.upDateBoards);
-  $('#2').on('click', gameEngine.upDateBoards);
-  $('#3').on('click', gameEngine.upDateBoards);
-  $('#4').on('click', gameEngine.upDateBoards);
-  $('#5').on('click', gameEngine.upDateBoards);
-  $('#6').on('click', gameEngine.upDateBoards);
-  $('#7').on('click', gameEngine.upDateBoards);
-  $('#8').on('click', gameEngine.upDateBoards);
 };
 
 module.exports = {
