@@ -12,10 +12,10 @@ const signUpFailure = () => {
 };
 
 const signInSuccess = () => {
-  $('#sign-up').css('display', 'none');
-  $('#sign-in').css('display', 'none');
-  $('#sign-out').css('display', 'unset');
-  $('#change-password').css('display', 'unset');
+  $('.sign-up').css('display', 'none');
+  $('.sign-in').css('display', 'none');
+  $('.sign-out').css('display', 'unset');
+  $('.change-password').css('display', 'unset');
   $('#change-password-title').text('Change Password!');
   $('#sign-in-title').text('Sign in!');
   $('#sign-up-title').text('Sign up!');
@@ -39,10 +39,10 @@ const changePasswordFailure = () => {
 };
 
 const signOutSuccess = () => {
-  $('#sign-up').css('display', 'unset');
-  $('#sign-in').css('display', 'unset');
-  $('#sign-out').css('display', 'none');
-  $('#change-password').css('display', 'none');
+  $('.sign-up').css('display', 'unset');
+  $('.sign-in').css('display', 'unset');
+  $('.sign-out').css('display', 'none');
+  $('.change-password').css('display', 'none');
   $('.clear-input').val('');
 };
 

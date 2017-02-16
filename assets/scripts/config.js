@@ -2,12 +2,11 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://daily-boulders.herokuapp.com',
+    production: 'https://git.heroku.com/daily-boulders.git',
     development: 'http://localhost:4741',
     },
 };
 
 module.exports = config;
 
-
-    // production: 'https://git.heroku.com/daily-boulders.git',
+//https://daily-boulders.herokuapp.com
