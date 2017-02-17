@@ -32,13 +32,6 @@
         </fieldset>
       </form>
 
-      <form id="sign-out">
-        <fieldset>
-          <legend id="sign-out-title">Sign out!</legend>
-          <input type="submit" name="submit" value="Sign out!">
-        </fieldset>
-      </form>
-
       <form id="change-password">
         <fieldset>
           <legend id="change-password-title">Change Password</legend>
@@ -48,16 +41,54 @@
         </fieldset>
       </form>
 
-      <form>
+      <form id="sign-out">
         <fieldset>
-          <legend>Create Climb</legend>
-          <input type="password" name="date" value="" placeholder="date">
-          <input type="password" name="grade" value="" placeholder="gade: e.g. V3">
-          <input type="submit" name="submit" value="Create Climb">
+          <legend id="sign-out-title">Sign out!</legend>
+          <input type="submit" name="submit" value="Sign out!">
         </fieldset>
       </form>
 
 
+
+      <!-- <form id="index-climb">
+        <fieldset>
+          <legend>index Climb</legend>
+          <input type="submit" name="submit" value="index Climb">
+        </fieldset>
+      </form> -->
+
+      <form id="show-climb">
+        <fieldset>
+          <legend>show Climb</legend>
+          <input type="text" name="climb[id]" id="climb-id" placeholder="id?">
+          <input type="submit" name="submit" value="show Climb(s)">
+        </fieldset>
+      </form>
+
+      <form id="create-climb">
+        <fieldset>
+          <legend>create Climb</legend>
+          <input type="text" name="date" value="" placeholder="date">
+          <input type="text" name="grade" value="" placeholder="gade: e.g. V3">
+          <input type="submit" name="submit" value="Create Climb">
+        </fieldset>
+      </form>
+
+      <form id="update-climb">
+        <fieldset>
+          <legend>update Climb</legend>
+          <input type="text" name="date" value="" placeholder="date">
+          <input type="text" name="grade" value="" placeholder="gade: e.g. V3">
+          <input type="submit" name="submit" value="update Climb">
+        </fieldset>
+      </form>
+
+      <form id="destroy-climb">
+        <fieldset>
+          <legend>destroy Climb</legend>
+          <input type="submit" name="submit" value="destroy Climb">
+        </fieldset>
+      </form>
 
       <img src="gollumonclimbing.jpg" alt="gollum">
 </html>
