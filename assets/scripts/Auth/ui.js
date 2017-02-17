@@ -3,46 +3,53 @@
 const success = () => {
 };
 
-const signUpSuccess = () => {
+const signUpSuccess = (data) => {
+  console.log(data);
   $('#sign-up-title').text('Great, now sign-in!');
 };
 
-const signUpFailure = () => {
+const signUpFailure = (data) => {
+  console.log(data);
   $('#sign-up-title').text('E-mail already taken or passwords did not match');
 };
 
-const signInSuccess = () => {
-  $('.sign-up').css('display', 'none');
-  $('.sign-in').css('display', 'none');
-  $('.sign-out').css('display', 'unset');
-  $('.change-password').css('display', 'unset');
+const signInSuccess = (data) => {
+  console.log(data);
+  $('#sign-up').css('display', 'none');
+  $('#sign-in').css('display', 'none');
+  $('#sign-out').css('display', 'unset');
+  $('#change-password').css('display', 'unset');
   $('#change-password-title').text('Change Password!');
   $('#sign-in-title').text('Sign in!');
   $('#sign-up-title').text('Sign up!');
   $('.clear-input').val('');
 };
 
-const signInFailure = () => {
+const signInFailure = (data) => {
+  console.log(data);
   $('#sign-in-title').text('Wrong e-mail or Password');
 };
 
 const failure = () => {
 };
 
-const changePasswordSuccess = () => {
+const changePasswordSuccess = (data) => {
+  console.log(data);
   $('#change-password-title').text('Change Password!');
   $('.clear-input').val('');
 };
 
-const changePasswordFailure = () => {
+const changePasswordFailure = (data) => {
+  console.log(data);
   $('#change-password-title').text('Current password is wrong');
 };
 
-const signOutSuccess = () => {
-  $('.sign-up').css('display', 'unset');
-  $('.sign-in').css('display', 'unset');
-  $('.sign-out').css('display', 'none');
-  $('.change-password').css('display', 'none');
+const signOutSuccess = (data) => {
+  console.log(data);
+  $('#sign-up').css('display', 'unset');
+  $('#sign-in').css('display', 'unset');
+  $('#sign-out').css('display', 'none');
+  $('#change-password').css('display', 'none');
   $('.clear-input').val('');
 };
 
