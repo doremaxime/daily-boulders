@@ -53,7 +53,7 @@ const show = function (id) {
 
 module.exports = {
   index,
-  // show,
+  show,
   // create,
   // update,
   // destroy,

@@ -15,8 +15,8 @@ const onIndex = function (event) {
       .catch(ui.indexFailure);
   } else {
     api.show(climbId)
-    .then(ui.indexSuccess)
-    .catch(ui.indexailure);
+    .then(ui.showSuccess)
+    .catch(ui.showFailure);
   }
 
 };
@@ -70,7 +70,7 @@ const onIndex = function (event) {
 // };
 
 const addHandlers = () => {
-  $('#index-climb').on('submit', onIndex);
+  $('.index-and-show-climb').on('submit', onIndex);
   // $('#create-climb').on('submit', onCreate);
 };
 

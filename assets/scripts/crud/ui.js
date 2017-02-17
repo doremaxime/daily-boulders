@@ -10,7 +10,8 @@ const indexFailure = (data) => {
 };
 
 const showSuccess = (data) => {
-  console.log(data);
+  // console.log(data);
+  console.table(data.climb);
 };
 
 const showFailure = (data) => {
