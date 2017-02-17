@@ -8,7 +8,7 @@ const store = require('../store');
 const onIndex = function (event) {
   event.preventDefault();
   let climbId = $('#climb-id').val();
-
+console.log(climbId);
   if (climbId.length === 0){
       api.index()
       .then(ui.indexSuccess)
