@@ -1,7 +1,6 @@
 'use strict';
 
 const indexSuccess = (data) => {
-  // console.log(data);
   console.table(data.climbs);
 };
 
@@ -18,7 +17,7 @@ const showFailure = (data) => {
 };
 
 const createSuccess = (data) => {
-  console.log(data);
+  console.log(data.book);
 };
 
 const createFailure = (data) => {

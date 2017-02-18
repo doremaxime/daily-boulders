@@ -18,28 +18,23 @@ const show = function (id) {
 };
 
 
-//
-// const create = function (data) {
-//   return $.ajax({
-//     url: `${config.apiOrigin}/change-password/${store.user.id}`,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`,
-//     },
-//     data,
-//   });
-// };
-//
-// const update = function (data) {
-//   return $.ajax({
-//     url: `${config.apiOrigin}/change-password/${store.user.id}`,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`,
-//     },
-//     data,
-//   });
-// };
+
+const create = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/climbs',
+    method: 'POST',
+    data,
+  });
+};
+
+const update = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/climbs/' + data.climb.id,
+    method: 'PATCH',
+    data,
+  });
+};
+
 //
 // const destroy = function () {
 //   return $.ajax({
@@ -54,7 +49,7 @@ const show = function (id) {
 module.exports = {
   index,
   show,
-  // create,
-  // update,
+  create,
+  update,
   // destroy,
 };

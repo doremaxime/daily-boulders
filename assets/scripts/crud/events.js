@@ -5,7 +5,7 @@ const api = require('./api');
 const ui = require('./ui');
 const store = require('../store');
 
-const onIndex = function (event) {
+const onIndexAnShow = function (event) {
   event.preventDefault();
   let climbId = $('#climb-id').val();
 console.log(climbId);
@@ -20,42 +20,29 @@ console.log(climbId);
   }
 
 };
-// const onShow = function (event) {
-//   event.preventDefault();
-//
-//   let data = getFormFields(event.target);
-//
-//   api.signIn(data)
-//   .then((response) => {
-//     store.user = response.user;
-//     return store.user;
-//   })
-//     .then(ui.signInSuccess)
-//     .catch(ui.signInFailure);
-// };
-//
-// const onCreate = function (event) {
-//   event.preventDefault();
-//
-//   let data = getFormFields(event.target);
-//
-//   api.changePassword(data)
-//     .then(ui.changePasswordSuccess)
-//     .catch(ui.changePasswordFailure)
-//     ;
-// };
-//
-// const onUpdate = function (event) {
-//   event.preventDefault();
-//
-//   let data = getFormFields(event.target);
-//
-//   api.changePassword(data)
-//     .then(ui.changePasswordSuccess)
-//     .catch(ui.changePasswordFailure)
-//     ;
-// };
-//
+
+const onCreate = function (event) {
+  event.preventDefault();
+
+  let data = getFormFields(event.target);
+
+  api.create(data)
+    .then(ui.createSuccess)
+    .catch(ui.createFailure)
+    ;
+};
+
+const onUpdate = function (event) {
+  event.preventDefault();
+
+  let data = getFormFields(event.target);
+
+  api.update(data)
+    .then(ui.updateSuccess)
+    .catch(ui.updateFailure)
+    ;
+};
+
 // const onDestroy = function (event) {
 //   event.preventDefault();
 //
@@ -70,15 +57,15 @@ console.log(climbId);
 // };
 
 const addHandlers = () => {
-  $('.index-and-show-climb').on('submit', onIndex);
-  // $('#create-climb').on('submit', onCreate);
+  $('.index-and-show-climb').on('submit', onIndexAnShow);
+  $('.create-climb').on('submit', onCreate);
+  $('.update-climb').on('submit', onUpdate);
 };
 
 module.exports = {
-  onIndex,
-  // onShow,
-  // onCreate,
-  // onUpdate,
+  onIndexAnShow,
+  onCreate,
+  onUpdate,
   // onDestroy,
   // addHandlers,
   addHandlers,
