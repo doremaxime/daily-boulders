@@ -40,15 +40,7 @@ const destroyFailure = (data) => {
   console.log(data);
 };
 
-const success = () => {
-};
-
-const failure = () => {
-};
-
 module.exports = {
-  failure,
-  success,
   indexSuccess,
   indexFailure,
   showSuccess,

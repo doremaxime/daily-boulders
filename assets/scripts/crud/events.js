@@ -43,30 +43,28 @@ const onUpdate = function (event) {
     ;
 };
 
-// const onDestroy = function (event) {
-//   event.preventDefault();
-//
-//   api.signOut()
-//     .then(() => {
-//       delete store.user;
-//       return store;
-//     })
-//     .then(ui.signOutSuccess)
-//     .catch(ui.error)
-//     ;
-// };
+const onDestroy = function (event) {
+  event.preventDefault();
+
+  let data = getFormFields(event.target);
+
+  api.destroy(data.climb.id)
+    .then(ui.destroySuccess)
+    .catch(ui.destroyFailure)
+    ;
+};
 
 const addHandlers = () => {
   $('.index-and-show-climb').on('submit', onIndexAnShow);
   $('.create-climb').on('submit', onCreate);
   $('.update-climb').on('submit', onUpdate);
+  $('.destroy-climb').on('submit', onDestroy);
 };
 
 module.exports = {
   onIndexAnShow,
   onCreate,
   onUpdate,
-  // onDestroy,
-  // addHandlers,
+  onDestroy,
   addHandlers,
 };

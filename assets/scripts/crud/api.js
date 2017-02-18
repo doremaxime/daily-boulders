@@ -35,21 +35,20 @@ const update = function (data) {
   });
 };
 
-//
-// const destroy = function () {
-//   return $.ajax({
-//     url: `${config.apiOrigin}/sign-out/${store.user.id}`,
-//     method: 'DELETE',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`,
-//     },
-//   });
-// };
+const destroy = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/climbs/' + id,
+    method: 'DELETE',
+    // headers: {
+    //   Authorization: `Token token=${store.user.token}`,
+    // },
+  });
+};
 
 module.exports = {
   index,
   show,
   create,
   update,
-  // destroy,
+  destroy,
 };
