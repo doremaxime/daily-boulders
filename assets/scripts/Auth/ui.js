@@ -51,6 +51,10 @@ const signOutSuccess = (data) => {
   $('#sign-out').css('display', 'none');
   $('#change-password').css('display', 'none');
   $('.clear-input').val('');
+  $('.clear-input-show').val('');
+  $('.clear-input-create').val('');
+  $('.clear-input-update').val('');
+  $('.clear-input-destroy').val('');
 };
 
 module.exports = {
