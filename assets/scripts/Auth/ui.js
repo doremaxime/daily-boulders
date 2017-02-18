@@ -23,6 +23,7 @@ const signInSuccess = (data) => {
   $('#sign-in-title').text('Sign in!');
   $('#sign-up-title').text('Sign up!');
   $('.clear-input').val('');
+  $('.crud-container').css('display', 'unset');
 };
 
 const signInFailure = (data) => {
@@ -50,6 +51,7 @@ const signOutSuccess = (data) => {
   $('#sign-in').css('display', 'unset');
   $('#sign-out').css('display', 'none');
   $('#change-password').css('display', 'none');
+  $('.crud-container').css('display', 'none');
   $('.clear-input').val('');
   $('.clear-input-show').val('');
   $('.clear-input-create').val('');

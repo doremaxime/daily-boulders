@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Do not add `link` tags unless you know what you are doing -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
+    <!-- Do not add `script` tags unless you know what you are doing -->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+  <body class="container-fluid">
 
 <!-- Authorization -->
-      <form id="sign-up">
-        <fieldset>
-          <legend id="sign-up-title">Sign up!</legend>
-          <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email">
-          <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password">
-          <input class="clear-input" type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
-          <input type="submit" name="submit" value="Sign up!">
-        </fieldset>
-      </form>
+    <form id="sign-up">
+      <fieldset>
+        <legend id="sign-up-title">Sign up!</legend>
+        <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email">
+        <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password">
+        <input class="clear-input" type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+        <input type="submit" name="submit" value="Sign up!">
+      </fieldset>
+    </form>
 
-      <form id="sign-in">
-        <fieldset>
-          <legend id="sign-in-title">Sign in!</legend>
-          <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email">
-          <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password">
-          <input type="submit" name="submit" value="Sign in!">
-        </fieldset>
-      </form>
+    <form id="sign-in">
+      <fieldset>
+        <legend id="sign-in-title">Sign in!</legend>
+        <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email">
+        <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password">
+        <input type="submit" name="submit" value="Sign in!">
+      </fieldset>
+    </form>
 
-      <form id="change-password">
-        <fieldset>
-          <legend id="change-password-title">Change Password</legend>
-          <input class="clear-input" type="password" name="passwords[old]" value="" placeholder="Old Password">
-          <input class="clear-input" type="password" name="passwords[new]" value="" placeholder="New Password">
-          <input type="submit" name="submit" value="Change Password">
-        </fieldset>
-      </form>
+    <form id="change-password">
+      <fieldset>
+        <legend id="change-password-title">Change Password</legend>
+        <input class="clear-input" type="password" name="passwords[old]" value="" placeholder="Old Password">
+        <input class="clear-input" type="password" name="passwords[new]" value="" placeholder="New Password">
+        <input type="submit" name="submit" value="Change Password">
+      </fieldset>
+    </form>
 
-      <form id="sign-out">
-        <fieldset>
-          <legend id="sign-out-title">Sign out!</legend>
-          <input type="submit" name="submit" value="Sign out!">
-        </fieldset>
-      </form>
-
-
+    <form id="sign-out">
+      <fieldset>
+        <legend id="sign-out-title">Sign out!</legend>
+        <input type="submit" name="submit" value="Sign out!">
+      </fieldset>
+    </form>
 
 <!-- CRUD -->
+    <div class="crud-container">
       <form class="index-and-show-climb">
         <fieldset>
           <legend>show Climb</legend>
@@ -86,6 +85,8 @@
           <input type="submit" name="submit" value="destroy Climb">
         </fieldset>
       </form>
+    </div>
 
-      <img src="gollumonclimbing.jpg" alt="gollum">
+    <img src="gollumonclimbing.jpg" alt="gollum">
+  </body>
 </html>
