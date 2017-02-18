@@ -3,7 +3,7 @@
 const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
-const store = require('../store');
+// const store = require('../store');
 
 const onIndexAnShow = function (event) {
   event.preventDefault();
