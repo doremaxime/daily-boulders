@@ -17,9 +17,9 @@
       <form id="sign-up">
         <fieldset>
           <legend id="sign-up-title">Sign up!</legend>
-          <input type="text" name="credentials[email]" value="" placeholder="email">
-          <input type="password" name="credentials[password]" value="" placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+          <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email">
+          <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password">
+          <input class="clear-input" type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
           <input type="submit" name="submit" value="Sign up!">
         </fieldset>
       </form>
@@ -27,8 +27,8 @@
       <form id="sign-in">
         <fieldset>
           <legend id="sign-in-title">Sign in!</legend>
-          <input type="text" name="credentials[email]" value="" placeholder="email">
-          <input type="password" name="credentials[password]" value="" placeholder="password">
+          <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email">
+          <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password">
           <input type="submit" name="submit" value="Sign in!">
         </fieldset>
       </form>
@@ -36,8 +36,8 @@
       <form id="change-password">
         <fieldset>
           <legend id="change-password-title">Change Password</legend>
-          <input type="password" name="passwords[old]" value="" placeholder="Old Password">
-          <input type="password" name="passwords[new]" value="" placeholder="New Password">
+          <input class="clear-input" type="password" name="passwords[old]" value="" placeholder="Old Password">
+          <input class="clear-input" type="password" name="passwords[new]" value="" placeholder="New Password">
           <input type="submit" name="submit" value="Change Password">
         </fieldset>
       </form>
@@ -55,7 +55,7 @@
       <form class="index-and-show-climb">
         <fieldset>
           <legend>show Climb</legend>
-          <input type="text" name="climb[id]" id="climb-id" placeholder="id">
+          <input class="clear-input-sho class="clear-input" " type="text" name="climb[id]" id="climb-id" placeholder="id">
           <input type="submit" name="submit" value="show Climb(s)">
         </fieldset>
       </form>
@@ -63,8 +63,8 @@
       <form class="create-climb">
         <fieldset>
           <legend>create Climb</legend>
-          <input type="text" name="climb[date]" value="" placeholder="date">
-          <input type="text" name="climb[grade]" value="" placeholder="gade: e.g. V3">
+          <input class="clear-input-create" type="text" name="climb[date]" value="" placeholder="date">
+          <input class="clear-input-create" type="text" name="climb[grade]" value="" placeholder="gade: e.g. V3">
           <input type="submit" name="submit" value="Create Climb">
         </fieldset>
       </form>
@@ -72,9 +72,9 @@
       <form class="update-climb">
         <fieldset>
           <legend>update Climb</legend>
-          <input type="text" name="climb[id]" placeholder="id">
-          <input type="text" name="climb[date]" placeholder="date: e.g. 2000-12-20">
-          <input type="text" name="climb[grade]" placeholder="gade: e.g. V3">
+          <input class="clear-input-update" type="text" name="climb[id]" placeholder="id">
+          <input class="clear-input-update" type="text" name="climb[date]" placeholder="date: e.g. 2000-12-20">
+          <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3">
           <input type="submit" name="submit" value="update Climb">
         </fieldset>
       </form>
@@ -82,7 +82,7 @@
       <form class="destroy-climb">
         <fieldset>
           <legend>destroy Climb</legend>
-          <input type="text" name="climb[id]" placeholder="climb id">
+          <input class="clear-input-destroy" type="text" name="climb[id]" placeholder="climb id">
           <input type="submit" name="submit" value="destroy Climb">
         </fieldset>
       </form>
