@@ -10,6 +10,7 @@ const indexFailure = (data) => {
 
 const showSuccess = (data) => {
   console.log(data.climb);
+  $('.clear-input-show').val('');
 };
 
 const showFailure = (data) => {
@@ -18,6 +19,7 @@ const showFailure = (data) => {
 
 const createSuccess = (data) => {
   console.log(data.book);
+  $('.clear-input-create').val('');
 };
 
 const createFailure = (data) => {
@@ -26,6 +28,7 @@ const createFailure = (data) => {
 
 const updateSuccess = (data) => {
   console.log(data);
+  $('.clear-input-update').val('');
 };
 
 const updateFailure = (data) => {
@@ -34,6 +37,7 @@ const updateFailure = (data) => {
 
 const destroySuccess = (data) => {
   console.log(data);
+  $('.clear-input-destroy').val('');
 };
 
 const destroyFailure = (data) => {
