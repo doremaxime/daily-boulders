@@ -53,28 +53,25 @@
     <div class="crud-container">
       <form class="index-and-show-climb">
         <fieldset>
-          <legend>show Climb</legend>
+          <legend id="index-show-title">Show Climb(s)</legend>
           <input class="clear-input-show" type="text" name="climb[id]" id="climb-id" placeholder="id">
           <input type="submit" name="submit" value="show Climb(s)">
         </fieldset>
       </form>
 
-      <div class="view">
-      </div>
+      <form class="create-climb">
+        <fieldset>
+          <legend id="create-title">Create Climb</legend>
+          <input class="clear-input-create" type="text" name="climb[date]" value="" placeholder="date: e.g. 2017-02-13">
+          <input class="clear-input-create" type="text" name="climb[grade]" value="" placeholder="gade: e.g. V3">
+          <input type="submit" name="submit" value="Create Climb">
+        </fieldset>
+      </form>
 
-
-        <form class="create-climb">
-          <fieldset>
-            <legend>create Climb</legend>
-            <input class="clear-input-create" type="text" name="climb[date]" value="" placeholder="date: e.g. 2017-02-13">
-            <input class="clear-input-create" type="text" name="climb[grade]" value="" placeholder="gade: e.g. V3">
-            <input type="submit" name="submit" value="Create Climb">
-          </fieldset>
-        </form>
-
+    <div class="update-delete-container">
       <form class="update-climb">
         <fieldset>
-          <legend>update Climb</legend>
+          <legend id="update-title">Update Climb</legend>
           <input class="clear-input-update" type="text" name="climb[id]" placeholder="id">
           <input class="clear-input-update" type="text" name="climb[date]" placeholder="date: e.g. 2000-12-20">
           <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3">
@@ -84,14 +81,16 @@
 
       <form class="destroy-climb">
         <fieldset>
-          <legend>destroy Climb</legend>
+          <legend id="destroy-title">Destroy Climb</legend>
           <input class="clear-input-destroy" type="text" name="climb[id]" placeholder="climb id">
           <input type="submit" name="submit" value="destroy Climb">
         </fieldset>
       </form>
     </div>
+</div>
 
-
+    <div class="view">
+    </div>
 
 
 

@@ -1,6 +1,6 @@
 'use strict';
 
-// const events = require('./events.js');
+const crud = require('../crud/ui.js');
 
 const signUpSuccess = (data) => {
   console.log(data);
@@ -53,6 +53,7 @@ const signOutSuccess = (data) => {
   $('.clear-input-update').val('');
   $('.clear-input-destroy').val('');
   $('.view').css('display', 'none');
+  crud.resetTitles();
 };
 
 module.exports = {
