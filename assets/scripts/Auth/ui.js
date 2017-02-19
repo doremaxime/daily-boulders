@@ -52,6 +52,7 @@ const signOutSuccess = (data) => {
   $('.clear-input-create').val('');
   $('.clear-input-update').val('');
   $('.clear-input-destroy').val('');
+  $('.view').css('display', 'none');
 };
 
 module.exports = {

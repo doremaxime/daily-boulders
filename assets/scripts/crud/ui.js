@@ -6,7 +6,7 @@ const showClimbsHandlerbars = require('../templates/helpers/show-climb.handlebar
 
 const indexSuccess = (data) => {
   console.table(data.climbs);
-
+  $('.view').css('display', 'initial');
   $('.view').text('');
 
   let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climbs });
@@ -33,29 +33,33 @@ const showFailure = (data) => {
 
 const createSuccess = (data) => {
   console.log(data.book);
-  $('.clear-input-create').val('');
+  $('.clear-input-create').val('nice! another?');
 };
 
 const createFailure = (data) => {
   console.log(data);
+  $('.clear-input-create').val('Hmmm... try again');
+
 };
 
 const updateSuccess = (data) => {
   console.log(data);
-  $('.clear-input-update').val('');
+  $('.clear-input-update').val('Sweeeet');
 };
 
 const updateFailure = (data) => {
   console.log(data);
+  $('.clear-input-update').val('Hmmm... try again');
 };
 
 const destroySuccess = (data) => {
   console.log(data);
-  $('.clear-input-destroy').val('');
+  $('.clear-input-destroy').val('climb destroyed! more?');
 };
 
 const destroyFailure = (data) => {
   console.log(data);
+  $('.clear-input-destroy').val('Hmmm... try again');
 };
 
 module.exports = {
