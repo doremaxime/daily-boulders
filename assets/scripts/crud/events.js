@@ -3,16 +3,15 @@
 const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
-// const store = require('../store');
 
 const onIndexAnShow = function (event) {
   event.preventDefault();
   let climbId = $('#climb-id').val();
-console.log(climbId);
-  if (climbId.length === 0){
-      api.index()
-      .then(ui.indexSuccess)
-      .catch(ui.indexFailure);
+  console.log(climbId);
+  if (climbId.length === 0) {
+    api.index()
+    .then(ui.indexSuccess)
+    .catch(ui.indexFailure);
   } else {
     api.show(climbId)
     .then(ui.showSuccess)
