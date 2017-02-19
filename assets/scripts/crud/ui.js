@@ -1,7 +1,14 @@
 'use strict';
 
+const showClimbsHandlerbars = require('../templates/helpers/climb-listing.handlebars');
+
 const indexSuccess = (data) => {
   console.table(data.climbs);
+
+  $('.view').text('');
+
+  let showClimbsHtml = showClimbsHandlerbars({ climbs: data.climbs });
+  $('.view').html(showClimbsHtml);
 };
 
 const indexFailure = (data) => {

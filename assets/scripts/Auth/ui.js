@@ -1,11 +1,9 @@
 'use strict';
 
-const success = () => {
-};
+// const events = require('./events.js');
 
 const signUpSuccess = (data) => {
   console.log(data);
-  $('#sign-up-title').text('Great, now sign-in!');
 };
 
 const signUpFailure = (data) => {
@@ -29,9 +27,6 @@ const signInSuccess = (data) => {
 const signInFailure = (data) => {
   console.log(data);
   $('#sign-in-title').text('Wrong e-mail or Password');
-};
-
-const failure = () => {
 };
 
 const changePasswordSuccess = (data) => {
@@ -60,8 +55,6 @@ const signOutSuccess = (data) => {
 };
 
 module.exports = {
-  failure,
-  success,
   signUpSuccess,
   signUpFailure,
   signInSuccess,
