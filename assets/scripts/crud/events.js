@@ -6,27 +6,27 @@ const ui = require('./ui');
 
 const onIndexAnShow = function () {
   // event.preventDefault();
-  let climbId = $('#climb-id').val();
-  console.log(climbId);
-  if (climbId.length === 0) {
+  // let climbId = $('#climb-id').val();
+  // console.log(climbId);
+  // if (climbId.length === 0) {
     api.index()
     .then(ui.indexSuccess)
     .catch(ui.indexFailure);
-  } else {
-    api.show(climbId)
-    .then(ui.showSuccess)
-    .catch(ui.showFailure);
-  }
+  // } else {
+  //   api.show(climbId)
+  //   .then(ui.showSuccess)
+  //   .catch(ui.showFailure);
+  // }
 
 };
 
-const onIndexFromSignIn = function (event) {
-  console.log(1);
-  event.preventDefault();
-  api.index()
-    .then(ui.indexSuccess)
-    .catch(ui.indexFailure);
-};
+// const onIndexFromSignIn = function (event) {
+//   console.log(1);
+//   event.preventDefault();
+//   api.index()
+//     .then(ui.indexSuccess)
+//     .catch(ui.indexFailure);
+// };
 
 const onCreate = function (event) {
   event.preventDefault();
@@ -62,7 +62,7 @@ const onDestroy = function (event) {
 };
 
 const addHandlers = () => {
-  $('.index-and-show-climb').on('submit', onIndexAnShow);
+  // $('.index-and-show-climb').on('submit', onIndexAnShow);
   $('.create-climb').on('submit', onCreate);
   $('.update-climb').on('submit', onUpdate);
   $('.destroy-climb').on('submit', onDestroy);
@@ -70,7 +70,7 @@ const addHandlers = () => {
 
 module.exports = {
   onIndexAnShow,
-  onIndexFromSignIn,
+  // onIndexFromSignIn,
   onCreate,
   onUpdate,
   onDestroy,
