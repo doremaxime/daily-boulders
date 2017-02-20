@@ -1,6 +1,6 @@
 'use strict';
 
-const crud = require('../crud/ui.js');
+const crud = require('../crud/ui');
 // const indexClimbsHandlerbars = require('../templates/helpers/index-climbs.handlebars');
 const crudEvents = require('../crud/events');
 
@@ -28,6 +28,7 @@ const signInSuccess = (data) => {
   $('#signInModal').modal('hide');
   $('.container').css('display', 'none');
   crudEvents.onIndexAnShow();
+  $('#create-climb-primary-button').css('display', 'unset');
 };
 
 const signInFailure = (data) => {
@@ -63,6 +64,7 @@ const signOutSuccess = (data) => {
   $('#change-password-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'unset');
+  $('#create-climb-primary-button').css('display', 'none');
   $('#sign-out-button').css('display', 'none');
   $('.container').css('display', 'unset');
 };

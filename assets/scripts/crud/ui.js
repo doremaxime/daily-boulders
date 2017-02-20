@@ -54,6 +54,7 @@ const createSuccess = (data) => {
   $('.clear-input-create').val('');
   $('#createClimbModalLabel').text('Create Climb');
   $('#createClimbModal').modal('hide');
+  // crudEvents.index?
 };
 
 const createFailure = (data) => {
