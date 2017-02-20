@@ -5,7 +5,7 @@ const showClimbsHandlerbars = require('../templates/helpers/show-climb.handlebar
 
 function resetTitles() {
   $('#index-show-title').text('show Climbs');
-  $('#create-title').text('Create Climb');
+  $('#createClimbModalLabel').text('Create Climb');
   $('#update-title').text('Update Climb');
   $('#destroy-title').text('Destroy Climb');
 }
@@ -52,13 +52,14 @@ const showFailure = (data) => {
 const createSuccess = (data) => {
   console.log(data.book);
   $('.clear-input-create').val('');
-  $('#create-title').text('Create Another Climb!');
+  $('#createClimbModalLabel').text('Create Climb');
+  $('#createClimbModal').modal('hide');
 };
 
 const createFailure = (data) => {
   console.log(data);
   $('.clear-input-create').val('');
-  $('#create-title').text('hmmm... something was not entered right');
+  $('#createClimbModalLabel').text('hmmm... something was not entered right');
 };
 
 const updateSuccess = (data) => {
