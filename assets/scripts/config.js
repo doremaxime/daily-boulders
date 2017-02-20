@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://git.heroku.com/daily-boulders.git',
+    production: 'https://daily-boulders.herokuapp.com/',
     development: 'http://localhost:4741',
   },
 };

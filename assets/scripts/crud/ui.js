@@ -16,7 +16,7 @@ const indexSuccess = (data) => {
   $('.view').css('display', 'initial');
   $('.view').text('');
 
-  let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climbs });
+  let indexClimbsHtml = indexClimbsHandlerbars({ climb: data.climb });
   $('.view').html(indexClimbsHtml);
 
   resetTitles();
