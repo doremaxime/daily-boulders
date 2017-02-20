@@ -1,7 +1,16 @@
-{{#each climbs as |climb|}}
-
-  <ul data-id="{{climb.id}}">
-    <li><h1 data-id="{{climb.id}}"> <small>id: {{climb.id}}, date: {{climb.date}}, grade: {{climb.grade}}</small></h1></li>
-  </ul>
-
-{{/each}}
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Date</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each climbs as |climb|}}
+    <tr data-id="{{climb.id}}">
+      <th scope="row">{{climb.id}}</th>
+      <td>{{climb.date}}</td>
+      <td>{{climb.grade}}</td>
+    </tr>
+    {{/each}}
+  </tbody>

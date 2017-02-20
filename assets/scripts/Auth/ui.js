@@ -54,7 +54,7 @@ const signOutSuccess = (data) => {
   $('.clear-input-create').val('');
   $('.clear-input-update').val('');
   $('.clear-input-destroy').val('');
-  $('.view').css('display', 'none');
+  $('.table-striped').css('display', 'none');
   crud.resetTitles();
 
   $('#change-password-primary-button').css('display', 'none');

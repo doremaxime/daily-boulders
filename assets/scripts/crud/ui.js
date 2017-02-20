@@ -13,11 +13,11 @@ function resetTitles() {
 const indexSuccess = (data) => {
   console.table(data.climbs);
   $('.update-delete-container').css('display', 'unset');
-  $('.view').css('display', 'unset');
-  $('.view').text('');
+  $('.table-striped').css('display', 'unset');
+  $('.table-striped').text('');
 
   let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climbs });
-  $('.view').html(indexClimbsHtml);
+  $('.table-striped').html(indexClimbsHtml);
 
   resetTitles();
 };
@@ -34,10 +34,10 @@ const showSuccess = (data) => {
   $('.clear-input-show').val('');
 
   $('#index-show-title').text('');
-  $('.view').text('');
+  $('.table-striped').text('');
 
   let showClimbHtml = showClimbsHandlerbars({ climb: data.climb });
-  $('.view').html(showClimbHtml);
+  $('.table-striped').html(showClimbHtml);
 
   resetTitles();
 };
