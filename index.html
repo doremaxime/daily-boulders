@@ -21,7 +21,7 @@
 
 <!-- SIGN UP -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal" id="upsign">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal"  id="sign-up-primary-button">
   Sign up
 </button>
 
@@ -54,7 +54,7 @@
 
 <!-- SIGN IN -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signInModal">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signInModal" id="sign-in-primary-button">
   Sign in
 </button>
 
@@ -81,10 +81,41 @@
       </div>
   </div>
 </div>
-
-
 </div>
 </div>
+
+
+
+<!-- CHANGE PASSWORD -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#changePassword" id="change-password-primary-button">
+  Change Password
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="changePasswordModalLabel">Sign in!</h4>
+      </div>
+      <!-- <div class="modal-body"> -->
+      <form id="change-password">
+          <fieldset>
+            <legend id="change-password-title"></legend>
+            <input class="clear-input" type="password" name="passwords[old]" value="" placeholder="Old Password"><br><br>
+            <input class="clear-input" type="password" name="passwords[new]" value="" placeholder="New Password"><br><br>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+            </div>
+          </fieldset>
+        </form>
+      </div>
+  </div>
+</div>
+
 
 
 
@@ -107,14 +138,14 @@
       </fieldset>
     </form> -->
 
-    <form id="change-password">
+    <!-- <form id="change-password">
       <fieldset>
         <legend id="change-password-title">Change Password</legend>
         <input class="clear-input" type="password" name="passwords[old]" value="" placeholder="Old Password">
         <input class="clear-input" type="password" name="passwords[new]" value="" placeholder="New Password">
         <input type="submit" name="submit" value="Change Password">
       </fieldset>
-    </form>
+    </form> -->
 
     <form id="sign-out">
       <fieldset>

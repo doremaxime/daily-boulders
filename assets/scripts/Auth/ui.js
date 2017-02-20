@@ -4,8 +4,9 @@ const crud = require('../crud/ui.js');
 
 const signUpSuccess = (data) => {
   console.log(data);
+  $('#sign-up-primary-button').css('display', 'none');
   $('.fade').css('display', 'none');
-  $('#upsign').css('display', 'none');
+
 };
 
 const signUpFailure = (data) => {
@@ -18,14 +19,14 @@ const signInSuccess = (data) => {
   $('#sign-up').css('display', 'none');
   $('#sign-in').css('display', 'none');
   $('#sign-out').css('display', 'unset');
-  $('#change-password').css('display', 'unset');
   $('#change-password-title').text('Change Password!');
   $('#sign-in-title').text('Sign in!');
   $('#sign-up-title').text('Sign up!');
   $('.clear-input').val('');
   $('.crud-container').css('display', 'unset');
-  $('.btn').css('display', 'none');
-  $('.fade').css('display', 'none');
+  $('#sign-up-primary-button').css('display', 'none');
+  $('#sign-in-primary-button').css('display', 'none');
+  $('#change-password-primary-button').css('display', 'unset');
 };
 
 const signInFailure = (data) => {
@@ -61,6 +62,10 @@ const signOutSuccess = (data) => {
 
   //sign up and sign in buttons reappear
   $('.btn').css('display', 'unset');
+  $('#change-password-primary-button').css('display', 'none');
+  $('#sign-up-primary-button').css('display', 'unset');
+  $('#sign-in-primary-button').css('display', 'unset');
+  $('.fade').css('display', 'unset');
 
 };
 

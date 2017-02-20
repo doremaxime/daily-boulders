@@ -16,7 +16,7 @@ const indexSuccess = (data) => {
   $('.view').css('display', 'initial');
   $('.view').text('');
 
-  let indexClimbsHtml = indexClimbsHandlerbars({ climb: data.climb });
+  let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climb });
   $('.view').html(indexClimbsHtml);
 
   resetTitles();
@@ -29,6 +29,7 @@ const indexFailure = (data) => {
 };
 
 const showSuccess = (data) => {
+  console.log("In UI.js ", data.climb);
   console.log(data.climb);
   $('.update-delete-container').css('display', 'unset');
   $('.clear-input-show').val('');
@@ -36,7 +37,7 @@ const showSuccess = (data) => {
   $('#index-show-title').text('');
   $('.view').text('');
 
-  let showClimbHtml = showClimbsHandlerbars({ climbs: data.climb });
+  let showClimbHtml = showClimbsHandlerbars({ climb: data.climb });
   $('.view').html(showClimbHtml);
 
   resetTitles();
