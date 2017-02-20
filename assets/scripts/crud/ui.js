@@ -13,10 +13,10 @@ function resetTitles() {
 const indexSuccess = (data) => {
   console.table(data.climbs);
   $('.update-delete-container').css('display', 'unset');
-  $('.view').css('display', 'initial');
+  $('.view').css('display', 'unset');
   $('.view').text('');
 
-  let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climb });
+  let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climbs });
   $('.view').html(indexClimbsHtml);
 
   resetTitles();
@@ -29,7 +29,6 @@ const indexFailure = (data) => {
 };
 
 const showSuccess = (data) => {
-  console.log("In UI.js ", data.climb);
   console.log(data.climb);
   $('.update-delete-container').css('display', 'unset');
   $('.clear-input-show').val('');

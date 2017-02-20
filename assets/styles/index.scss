@@ -2,14 +2,28 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 $background: #38b0a0;
+$buttons: #60dc46;
 
 body {
   background-color: $background;
-  // color: ;
 }
 
-.btn:hover, .btn:active, .btn:visited {
-    background-color: #60dc46;
+.btn:hover,
+.btn:active,
+.btn:visited {
+  background-color: $buttons;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin: 0, 20%;
+  width: 70%;
+}
+
+.item img {
+  margin: auto;
+  max-height: 640px;
+  max-width: 300px;
 }
 
 #change-password-primary-button {
@@ -26,6 +40,7 @@ body {
 
 .view {
   background-color: pink;
+  display: none;
 }
 
 .update-delete-container {
