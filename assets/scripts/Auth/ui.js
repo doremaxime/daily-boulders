@@ -15,13 +15,14 @@ const signUpFailure = (data) => {
 
 const signInSuccess = (data) => {
   console.log(data);
-  $('#sign-out').css('display', 'unset');
+  $('#sign-out-button').css('display', 'unset');
   $('.clear-input').val('');
   $('.crud-container').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'none');
   $('#change-password-primary-button').css('display', 'unset');
   $('#signUpModalLabel').text('Sign up!');
+  $('#signInModalLabel').text('Sign in!');
   $('#signInModal').modal('hide');
 };
 
@@ -59,8 +60,6 @@ const signOutSuccess = (data) => {
   $('#change-password-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'unset');
-  $('#signInModalLabel').text("Sign in!");
-  $('#changePasswordModalLabel').text("Change Password");
 };
 
 module.exports = {

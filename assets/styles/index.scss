@@ -8,11 +8,15 @@ body {
   // color: ;
 }
 
+.btn:hover, .btn:active, .btn:visited {
+    background-color: #60dc46;
+}
+
 #change-password-primary-button {
   display: none;
 }
 
-#sign-out {
+#sign-out-button {
   display: none;
 }
 
