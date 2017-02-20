@@ -5,50 +5,47 @@ const crud = require('../crud/ui.js');
 const signUpSuccess = (data) => {
   console.log(data);
   $('#sign-up-primary-button').css('display', 'none');
-  $('.fade').css('display', 'none');
+
+  $('#signUpModalLabel').text('Now go sign up');
 
 };
 
 const signUpFailure = (data) => {
   console.log(data);
-  $('#sign-up-title').text('E-mail already taken or passwords did not match');
+  // $('#signInModalLabel').text('E-mail already taken or passwords did not match');
 };
 
 const signInSuccess = (data) => {
   console.log(data);
-  $('#sign-up').css('display', 'none');
-  $('#sign-in').css('display', 'none');
   $('#sign-out').css('display', 'unset');
-  $('#change-password-title').text('Change Password!');
-  $('#sign-in-title').text('Sign in!');
-  $('#sign-up-title').text('Sign up!');
   $('.clear-input').val('');
   $('.crud-container').css('display', 'unset');
-  $('#sign-up-primary-button').css('display', 'none');
   $('#sign-in-primary-button').css('display', 'none');
   $('#change-password-primary-button').css('display', 'unset');
+  $('#signUpModalLabel').text('Sign up!');
+  $('#signInModalLabel').text('Sign in!');
 };
 
 const signInFailure = (data) => {
   console.log(data);
-  $('#sign-in-title').text('Wrong e-mail or Password');
+  $('#signInModalLabel').text('Wrong email or password');
 };
 
 const changePasswordSuccess = (data) => {
   console.log(data);
-  $('#change-password-title').text('Change Password!');
+  // $('#change-password-title').text('Change Password!');
   $('.clear-input').val('');
 };
 
 const changePasswordFailure = (data) => {
   console.log(data);
-  $('#change-password-title').text('Current password is wrong');
+  // $('#change-password-title').text('Current password is wrong');
 };
 
 const signOutSuccess = (data) => {
   console.log(data);
-  $('#sign-up').css('display', 'unset');
-  $('#sign-in').css('display', 'unset');
+  // $('#sign-up').css('display', 'unset');
+  // $('#sign-in').css('display', 'unset');
   $('#sign-out').css('display', 'none');
   $('#change-password').css('display', 'none');
   $('.crud-container').css('display', 'none');
@@ -60,13 +57,11 @@ const signOutSuccess = (data) => {
   $('.view').css('display', 'none');
   crud.resetTitles();
 
-  //sign up and sign in buttons reappear
-  $('.btn').css('display', 'unset');
+
   $('#change-password-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'unset');
-  $('.fade').css('display', 'unset');
-
+  // $('.fade').css('display', 'unset');
 };
 
 module.exports = {
