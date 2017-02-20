@@ -49,7 +49,7 @@ const onSignOut = function (event) {
       return store;
     })
     .then(ui.signOutSuccess)
-    .catch(ui.error)
+    .catch(ui.signOutFailure)
     ;
 };
 
@@ -57,7 +57,7 @@ const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);
-  $('#sign-out-button').on('submit', onSignOut);
+  $('#sign-out-button').on('click', onSignOut);
 };
 
 module.exports = {

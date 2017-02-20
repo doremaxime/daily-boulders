@@ -15,15 +15,16 @@ const signUpFailure = (data) => {
 
 const signInSuccess = (data) => {
   console.log(data);
-  $('#sign-out-button').css('display', 'unset');
   $('.clear-input').val('');
   $('.crud-container').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'none');
+  $('#sign-out-button').css('display', 'unset');
   $('#change-password-primary-button').css('display', 'unset');
   $('#signUpModalLabel').text('Sign up!');
   $('#signInModalLabel').text('Sign in!');
   $('#signInModal').modal('hide');
+  $('.container').css('display', 'none');
 };
 
 const signInFailure = (data) => {
@@ -56,10 +57,15 @@ const signOutSuccess = (data) => {
   $('.view').css('display', 'none');
   crud.resetTitles();
 
-
   $('#change-password-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'unset');
+  $('#sign-out-button').css('display', 'none');
+  $('.container').css('display', 'unset');
+};
+
+const signOutFailure = (data) => {
+  console.log(data);
 };
 
 module.exports = {
@@ -70,4 +76,5 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
+  signOutFailure,
 };
