@@ -15,24 +15,25 @@
 
 <!-- Authorization -->
 
+<!-- SIGN UP -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal" id="upsign">
   Sign up
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Sign up!</h4>
+        <h4 class="modal-title" id="signUpModalLabel">Sign up!</h4>
       </div>
       <!-- <div class="modal-body"> -->
         <form id="sign-up">
           <fieldset>
             <legend id="sign-up-title"></legend>
-            <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email"><br><br>
+            <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="example@example.com"><br><br>
             <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password"><br><br>
             <input class="clear-input" type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation"><br><br>
       <!-- </div> -->
@@ -46,6 +47,36 @@
   </div>
 </div>
 
+
+<!-- SIGN IN -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signInModal">
+  Sign in
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="signInModalLabel">Sign in!</h4>
+      </div>
+      <!-- <div class="modal-body"> -->
+        <form id="sign-in">
+          <fieldset>
+            <legend id="sign-in-title"></legend>
+            <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="example@example.com"><br><br>
+            <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password"><br><br>      <!-- </div> -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+            </div>
+          </fieldset>
+        </form>
+      </div>
+  </div>
+</div>
 
 
 
@@ -62,14 +93,14 @@
       </fieldset>
     </form> -->
 
-    <form id="sign-in">
+    <!-- <form id="sign-in">
       <fieldset>
         <legend id="sign-in-title">Sign in!</legend>
         <input class="clear-input" type="text" name="credentials[email]" value="" placeholder="email">
         <input class="clear-input" type="password" name="credentials[password]" value="" placeholder="password">
         <input type="submit" name="submit" value="Submit">
       </fieldset>
-    </form>
+    </form> -->
 
     <form id="change-password">
       <fieldset>

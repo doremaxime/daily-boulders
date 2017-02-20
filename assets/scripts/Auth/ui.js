@@ -4,6 +4,8 @@ const crud = require('../crud/ui.js');
 
 const signUpSuccess = (data) => {
   console.log(data);
+  $('.fade').css('display', 'none');
+  $('#upsign').css('display', 'none');
 };
 
 const signUpFailure = (data) => {
@@ -22,6 +24,8 @@ const signInSuccess = (data) => {
   $('#sign-up-title').text('Sign up!');
   $('.clear-input').val('');
   $('.crud-container').css('display', 'unset');
+  $('.btn').css('display', 'none');
+  $('.fade').css('display', 'none');
 };
 
 const signInFailure = (data) => {
@@ -54,6 +58,10 @@ const signOutSuccess = (data) => {
   $('.clear-input-destroy').val('');
   $('.view').css('display', 'none');
   crud.resetTitles();
+
+  //sign up and sign in buttons reappear
+  $('.btn').css('display', 'unset');
+
 };
 
 module.exports = {
