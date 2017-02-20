@@ -13,8 +13,8 @@ function resetTitles() {
 const indexSuccess = (data) => {
   console.table(data.climbs);
   $('.update-delete-container').css('display', 'unset');
-  $('.table-striped').css('display', 'unset');
-  $('.table-striped').text('');
+  $('.table-index').css('display', 'unset');
+  // $('.table-index').text('');
 
   let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climbs });
   $('.table-striped').html(indexClimbsHtml);
@@ -34,10 +34,10 @@ const showSuccess = (data) => {
   $('.clear-input-show').val('');
 
   $('#index-show-title').text('');
-  $('.table-striped').text('');
+  $('.table-index').text('');
 
   let showClimbHtml = showClimbsHandlerbars({ climb: data.climb });
-  $('.table-striped').html(showClimbHtml);
+  $('.table-index').html(showClimbHtml);
 
   resetTitles();
 };

@@ -6,6 +6,7 @@ $buttons: #60dc46;
 
 body {
   background-color: $background;
+  text-align: center;
 }
 
 .btn:hover,
@@ -38,9 +39,11 @@ body {
   display: none;
 }
 
-.table {
+.table-index {
   display: none;
+  margin: 0, auto;
   text-align: center;
+  // width: 30%;
 }
 
 .update-delete-container {

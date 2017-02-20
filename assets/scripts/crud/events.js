@@ -4,8 +4,8 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
-const onIndexAnShow = function (event) {
-  event.preventDefault();
+const onIndexAnShow = function () {
+  // event.preventDefault();
   let climbId = $('#climb-id').val();
   console.log(climbId);
   if (climbId.length === 0) {
@@ -18,6 +18,14 @@ const onIndexAnShow = function (event) {
     .catch(ui.showFailure);
   }
 
+};
+
+const onIndexFromSignIn = function (event) {
+  console.log(1);
+  event.preventDefault();
+  api.index()
+    .then(ui.indexSuccess)
+    .catch(ui.indexFailure);
 };
 
 const onCreate = function (event) {
@@ -62,6 +70,7 @@ const addHandlers = () => {
 
 module.exports = {
   onIndexAnShow,
+  onIndexFromSignIn,
   onCreate,
   onUpdate,
   onDestroy,

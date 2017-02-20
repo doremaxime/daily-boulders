@@ -3,6 +3,8 @@
       <th>ID</th>
       <th>Date</th>
       <th>Grade</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -11,6 +13,8 @@
       <th scope="row">{{climb.id}}</th>
       <td>{{climb.date}}</td>
       <td>{{climb.grade}}</td>
+      <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+      <td><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
     </tr>
     {{/each}}
   </tbody>

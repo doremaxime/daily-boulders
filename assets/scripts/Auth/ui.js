@@ -1,6 +1,8 @@
 'use strict';
 
 const crud = require('../crud/ui.js');
+// const indexClimbsHandlerbars = require('../templates/helpers/index-climbs.handlebars');
+const crudEvents = require('../crud/events');
 
 const signUpSuccess = (data) => {
   console.log(data);
@@ -25,6 +27,7 @@ const signInSuccess = (data) => {
   $('#signInModalLabel').text('Sign in!');
   $('#signInModal').modal('hide');
   $('.container').css('display', 'none');
+  crudEvents.onIndexAnShow();
 };
 
 const signInFailure = (data) => {

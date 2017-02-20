@@ -4,6 +4,7 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 const store = require('../store');
+// const crudEvents = require('../crud/ui');
 
 const onSignUp = function (event) {
   event.preventDefault();
@@ -25,6 +26,7 @@ const onSignIn = function (event) {
     store.user = response.user;
     return store.user;
   })
+    // .then(crudEvents.onIndexFromSignIn)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure);
 };
