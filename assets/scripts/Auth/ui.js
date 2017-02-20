@@ -5,14 +5,12 @@ const crud = require('../crud/ui.js');
 const signUpSuccess = (data) => {
   console.log(data);
   $('#sign-up-primary-button').css('display', 'none');
-
-  $('#signUpModalLabel').text('Now go sign up');
-
+  $('#signUpModal').modal('hide');
 };
 
 const signUpFailure = (data) => {
   console.log(data);
-  // $('#signInModalLabel').text('E-mail already taken or passwords did not match');
+  $('#signInModalLabel').text('E-mail already taken or passwords did not match');
 };
 
 const signInSuccess = (data) => {
@@ -21,9 +19,10 @@ const signInSuccess = (data) => {
   $('.clear-input').val('');
   $('.crud-container').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'none');
+  $('#sign-up-primary-button').css('display', 'none');
   $('#change-password-primary-button').css('display', 'unset');
   $('#signUpModalLabel').text('Sign up!');
-  $('#signInModalLabel').text('Sign in!');
+  $('#signInModal').modal('hide');
 };
 
 const signInFailure = (data) => {
@@ -33,19 +32,18 @@ const signInFailure = (data) => {
 
 const changePasswordSuccess = (data) => {
   console.log(data);
-  // $('#change-password-title').text('Change Password!');
   $('.clear-input').val('');
+  $('#changePasswordModal').modal('hide');
+  $('#changePasswordModalLabel').text("Change Password");
 };
 
 const changePasswordFailure = (data) => {
   console.log(data);
-  // $('#change-password-title').text('Current password is wrong');
+  $('#changePasswordModalLabel').text("Current password does not match");
 };
 
 const signOutSuccess = (data) => {
   console.log(data);
-  // $('#sign-up').css('display', 'unset');
-  // $('#sign-in').css('display', 'unset');
   $('#sign-out').css('display', 'none');
   $('#change-password').css('display', 'none');
   $('.crud-container').css('display', 'none');
@@ -61,7 +59,8 @@ const signOutSuccess = (data) => {
   $('#change-password-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'unset');
-  // $('.fade').css('display', 'unset');
+  $('#signInModalLabel').text("Sign in!");
+  $('#changePasswordModalLabel').text("Change Password");
 };
 
 module.exports = {
