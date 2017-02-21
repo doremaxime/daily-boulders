@@ -4,6 +4,17 @@ const crud = require('../crud/ui');
 // const indexClimbsHandlerbars = require('../templates/helpers/index-climbs.handlebars');
 const crudEvents = require('../crud/events');
 
+function shakeForm() {
+   let l = 20;
+   for( let i = 0; i < 10; i++ )
+     $(".modal").animate( {
+         'margin-left': "+=" + ( l = -l ) + 'px',
+         'margin-right': "-=" + l + 'px'
+      }, 50);
+
+}
+
+
 const signUpSuccess = (data) => {
   console.log(data);
   $('#sign-up-primary-button').css('display', 'none');
@@ -12,7 +23,8 @@ const signUpSuccess = (data) => {
 
 const signUpFailure = (data) => {
   console.log(data);
-  $('#signInModalLabel').text('E-mail already taken or passwords did not match');
+  // $('#signInModalLabel').text('E-mail already taken or passwords did not match');
+  shakeForm();
 };
 
 const signInSuccess = (data) => {
@@ -23,8 +35,8 @@ const signInSuccess = (data) => {
   $('#sign-up-primary-button').css('display', 'none');
   $('#sign-out-button').css('display', 'unset');
   $('#change-password-primary-button').css('display', 'unset');
-  $('#signUpModalLabel').text('Sign up!');
-  $('#signInModalLabel').text('Sign in!');
+  // $('#signUpModalLabel').text('Sign up!');
+  // $('#signInModalLabel').text('Sign in!');
   $('#signInModal').modal('hide');
   $('.container').css('display', 'none');
   crudEvents.onIndexAnShow();
@@ -33,19 +45,22 @@ const signInSuccess = (data) => {
 
 const signInFailure = (data) => {
   console.log(data);
-  $('#signInModalLabel').text('Wrong email or password');
+  // $('#signInModalLabel').text('Wrong email or password');
+  shakeForm();
+
 };
 
 const changePasswordSuccess = (data) => {
   console.log(data);
   $('.clear-input').val('');
+  // $('#changePasswordModalLabel').text("Change Password");
   $('#changePasswordModal').modal('hide');
-  $('#changePasswordModalLabel').text("Change Password");
 };
 
 const changePasswordFailure = (data) => {
   console.log(data);
-  $('#changePasswordModalLabel').text("Current password does not match");
+  // $('#changePasswordModalLabel').text("Current password does not match");
+  shakeForm();
 };
 
 const signOutSuccess = (data) => {
