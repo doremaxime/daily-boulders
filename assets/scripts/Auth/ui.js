@@ -38,9 +38,11 @@ const signInSuccess = (data) => {
   // $('#signUpModalLabel').text('Sign up!');
   // $('#signInModalLabel').text('Sign in!');
   $('#signInModal').modal('hide');
-  $('.container').css('display', 'none');
   crudEvents.onIndexAnShow();
   $('#create-climb-primary-button').css('display', 'unset');
+
+  // This is the carousel
+  $('.container').css('display', 'none');
 };
 
 const signInFailure = (data) => {
@@ -81,7 +83,9 @@ const signOutSuccess = (data) => {
   $('#sign-in-primary-button').css('display', 'unset');
   $('#create-climb-primary-button').css('display', 'none');
   $('#sign-out-button').css('display', 'none');
-  $('.container').css('display', 'unset');
+
+  // This is the carousel
+  $('.container').css('display', 'initial');
 };
 
 const signOutFailure = (data) => {

@@ -4,10 +4,19 @@
 const indexClimbsHandlerbars = require('../templates/helpers/index-climbs.handlebars');
 const showClimbsHandlerbars = require('../templates/helpers/show-climb.handlebars');
 
+function shakeForm() {
+   let l = 20;
+   for( let i = 0; i < 10; i++ )
+     $(".modal").animate( {
+         'margin-left': "+=" + ( l = -l ) + 'px',
+         'margin-right': "-=" + l + 'px'
+      }, 50);
+
+}
+
 function resetTitles() {
   $('#index-show-title').text('show Climbs');
   $('#createClimbModalLabel').text('Create Climb');
-  $('#update-title').text('Update Climb');
   $('#destroy-title').text('Destroy Climb');
 }
 
@@ -66,14 +75,14 @@ const createFailure = (data) => {
 
 const updateSuccess = (data) => {
   console.log(data);
-  $('.clear-input-update').val('Sweeeet');
-  $('#update-title').text('Updated!');
+  $('.clear-input-update').val('');
+  $('.modal').modal('hide');
 };
 
 const updateFailure = (data) => {
   console.log(data);
-  $('.clear-input-update').val('');
-  $('#update-title').text('hmmm... something was entered right');
+  // $('.clear-input-update').val('');
+  shakeForm();
 };
 
 const destroySuccess = (data) => {

@@ -13,7 +13,7 @@
     <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
-  <body class="container-fluid">
+  <body class="body-container">
 
 
     <div class="row">
@@ -239,7 +239,7 @@
       </form> -->
 
     <div class="update-delete-container">
-      <form class="update-climb">
+      <!-- <form class="update-climb">
         <fieldset>
           <legend id="update-title">Update Climb</legend>
           <input class="clear-input-update" type="text" name="climb[id]" placeholder="id">
@@ -247,7 +247,35 @@
           <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3">
           <input type="submit" name="submit" value="update Climb">
         </fieldset>
-      </form>
+      </form> -->
+
+      <!-- SIGN IN -->
+      <button id="update-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#updateClimbModal">
+        Update Climb
+      </button>
+
+      <div id="updateClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="createClimbModalLabel">Update Climb</h4>
+            </div>
+            <form class="update-climb">
+                <fieldset>
+                  <legend id="update-title"></legend>
+                  <input class="clear-input-update" type="text" name="climb[id]" placeholder="id"><br><br>
+                  <input class="clear-input-update" type="date" name="climb[date]" placeholder="date: e.g. 2000-12-20"><br><br>
+                  <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3"><br><br>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+        </div>
+      </div>
 
       <form class="destroy-climb">
         <fieldset>
