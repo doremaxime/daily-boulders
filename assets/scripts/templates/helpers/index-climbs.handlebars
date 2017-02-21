@@ -13,8 +13,8 @@
       <th scope="row">{{climb.id}}</th>
       <td>{{climb.date}}</td>
       <td>{{climb.grade}}</td>
-      <td><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-      <td><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
+      <td><button id="update-climb-primary-button" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateClimbModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+      <td><button id="destroy-climb-primary-button" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#destroyClimbModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td>
     </tr>
     {{/each}}
   </tbody>
