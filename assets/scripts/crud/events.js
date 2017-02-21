@@ -35,6 +35,7 @@ const onCreate = function (event) {
 
   api.create(data)
     .then(ui.createSuccess)
+    .then(onIndexAnShow)
     .catch(ui.createFailure)
     ;
 };
@@ -46,6 +47,7 @@ const onUpdate = function (event) {
 
   api.update(data)
     .then(ui.updateSuccess)
+    .then(onIndexAnShow)
     .catch(ui.updateFailure)
     ;
 };
@@ -57,6 +59,7 @@ const onDestroy = function (event) {
 
   api.destroy(data.climb.id)
     .then(ui.destroySuccess)
+    .then(onIndexAnShow)
     .catch(ui.destroyFailure)
     ;
 };
