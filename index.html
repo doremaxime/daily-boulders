@@ -186,95 +186,86 @@
   <div class="crud-container">
     <!-- <div class="update-delete-container"> -->
 
-      <!-- UPDATE CLIMB -->
-      <button id="update-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#updateClimbModal">
-        Update Climb
-      </button>
-
-      <div id="updateClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="createClimbModalLabel">Update Climb</h4>
-            </div>
-            <form class="update-climb">
-              <fieldset>
-                <legend id="update-title"></legend>
-                <input class="clear-input-update" type="text" name="climb[id]" placeholder="id"><br><br>
-                <input class="clear-input-update" type="date" name="climb[date]" placeholder="date: e.g. 2000-12-20"><br><br>
-                <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3"><br><br>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <input type="submit" class="btn btn-primary" name="submit" value="Submit">
-                </div>
-              </fieldset>
-            </form>
+    <!-- CREATE CLIMB -->
+    <button id="create-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createClimbModal">Create Climb</button>
+    <div id="createClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="createClimbModalLabel">Create Climb!</h4>
           </div>
+          <form class="create-climb">
+            <fieldset>
+              <legend id="create-title"></legend>
+              <input class="clear-input-create" type="date" name="climb[date]" value="" placeholder="date: e.g. 2017-02-13"><br><br>
+              <input class="clear-input-create" type="text" name="climb[grade]" value="" placeholder="gade: e.g. V3"><br><br>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+              </div>
+            </fieldset>
+          </form>
         </div>
-      </div>
-
-      <!-- DESTROY CLIMB -->
-      <button id="destroy-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#destroyClimbModal">
-        Destroy Climb
-      </button>
-
-      <div id="destroyClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="destroyClimbModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="destroyClimbModalLabel">Destroy Climb</h4>
-            </div>
-            <form class="destroy-climb">
-              <fieldset>
-                <legend id="destroy-title"></legend>
-                <input class="clear-input-destroy" type="text" name="climb[id]" placeholder="climb id"><br><br>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <input type="submit" class="btn btn-primary" name="submit" value="Submit">
-                </div>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </div>
-
-    <!-- </div> -->
-
-  <!-- CREATE CLIMB -->
-  <button id="create-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#createClimbModal">
-  Create Climb
-</button>
-
-  <div id="createClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="createClimbModalLabel">Create Climb!</h4>
-        </div>
-        <form class="create-climb">
-          <fieldset>
-            <legend id="create-title"></legend>
-            <input class="clear-input-create" type="date" name="climb[date]" value="" placeholder="date: e.g. 2017-02-13"><br><br>
-            <input class="clear-input-create" type="text" name="climb[grade]" value="" placeholder="gade: e.g. V3"><br><br>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <input type="submit" class="btn btn-primary" name="submit" value="Submit">
-            </div>
-          </fieldset>
-        </form>
       </div>
     </div>
-  </div>
 
-  <div class="index">
-    <table class="table table-striped">
-    </table>
-  </div>
+    <!-- UPDATE CLIMB -->
+    <button id="update-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#updateClimbModal">Update Climb</button>
+    <div id="updateClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="createClimbModalLabel">Update Climb</h4>
+          </div>
+          <form class="update-climb">
+            <fieldset>
+              <legend id="update-title"></legend>
+              <input class="clear-input-update" type="text" name="climb[id]" placeholder="id"><br><br>
+              <input class="clear-input-update" type="date" name="climb[date]" placeholder="date: e.g. 2000-12-20"><br><br>
+              <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3"><br><br>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <!-- DESTROY CLIMB -->
+    <button id="destroy-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#destroyClimbModal">Destroy Climb</button>
+    <div id="destroyClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="destroyClimbModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="destroyClimbModalLabel">Destroy Climb</h4>
+          </div>
+          <form class="destroy-climb">
+            <fieldset>
+              <legend id="destroy-title"></legend>
+              <input class="clear-input-destroy" type="text" name="climb[id]" placeholder="climb id"><br><br>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table generated by handlebars when index is called will appear in here -->
+    <div class="index">
+      <table class="table table-striped">
+      </table>
+    </div>
+
+  </div>
 
 </body>
+
 </html>
