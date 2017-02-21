@@ -30,19 +30,15 @@ const signUpFailure = (data) => {
 const signInSuccess = (data) => {
   console.log(data);
   $('.clear-input').val('');
+  $('#signInModal').modal('hide');
+  $('.container').css('display', 'none');  // This is the carousel
   $('.crud-container').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'none');
   $('#sign-out-button').css('display', 'unset');
   $('#change-password-primary-button').css('display', 'unset');
-  // $('#signUpModalLabel').text('Sign up!');
-  // $('#signInModalLabel').text('Sign in!');
-  $('#signInModal').modal('hide');
-  crudEvents.onIndexAnShow();
   $('#create-climb-primary-button').css('display', 'unset');
-
-  // This is the carousel
-  $('.container').css('display', 'none');
+  crudEvents.onIndexAnShow();
 };
 
 const signInFailure = (data) => {
@@ -67,25 +63,22 @@ const changePasswordFailure = (data) => {
 
 const signOutSuccess = (data) => {
   console.log(data);
-  $('#sign-out').css('display', 'none');
-  $('#change-password').css('display', 'none');
+  $('#sign-out-button').css('display', 'none');
+  // $('#sign-out').css('display', 'none');
+  $('#change-password-primary-button').css('display', 'none');
+  // $('#change-password').css('display', 'none');
   $('.crud-container').css('display', 'none');
+  $('#sign-up-primary-button').css('display', 'unset');
+  $('#sign-in-primary-button').css('display', 'unset');
   $('.clear-input').val('');
   $('.clear-input-show').val('');
   $('.clear-input-create').val('');
   $('.clear-input-update').val('');
   $('.clear-input-destroy').val('');
-  $('.table-striped').css('display', 'none');
-  // crud.resetTitles();
+  // $('.table-striped').css('display', 'none');
 
-  $('#change-password-primary-button').css('display', 'none');
-  $('#sign-up-primary-button').css('display', 'unset');
-  $('#sign-in-primary-button').css('display', 'unset');
-  $('#create-climb-primary-button').css('display', 'none');
-  $('#sign-out-button').css('display', 'none');
-
-  // This is the carousel
-  $('.container').css('display', 'unset');
+  // $('#create-climb-primary-button').css('display', 'none');
+  $('.container').css('display', 'unset'); // This is the carousel
 };
 
 const signOutFailure = (data) => {
