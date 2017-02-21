@@ -3,10 +3,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 $background: #38b0a0;
 $buttons: #60dc46;
+$modal: #00f5d3;
 
 body {
   background-color: $background;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .btn:hover,
@@ -15,16 +17,19 @@ body {
   background-color: $buttons;
 }
 
-// .carousel-inner > .item > img,
-// .carousel-inner > .item > a > img {
+.modal-content {
+  background: $modal;
+}
+
+// .carousel {
 //   margin: 0, 20%;
 //   width: 70%;
 // }
 
 .slider-size {
+  margin: auto;
   max-height: 600px;
   min-height: 600px;
-  margin: auto;
 }
 
 #change-password-primary-button,
@@ -40,15 +45,19 @@ body {
   display: none;
 }
 
-.table-index {
+.index {
   display: none;
-  text-align: center;
+  // height: 20px;
+  // overflow: auto;
+  // width: 150px;
 }
 
-// need something to make the table less wide
-// .table-striped {
-//   margin: 0, 30%;
-// }
+.table {
+  margin-left: 30%;
+  width: 40%;
+  // height: 150px;
+  // overflow: scroll;
+}
 
 .update-delete-container {
   display: none;
