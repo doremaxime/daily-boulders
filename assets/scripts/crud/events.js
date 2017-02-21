@@ -57,7 +57,7 @@ const onDestroy = function (event) {
 
   let data = getFormFields(event.target);
 
-  api.destroy(data.climb.id)
+  api.destroy(data.climb.data_id)
     .then(ui.destroySuccess)
     .then(onIndexAnShow)
     .catch(ui.destroyFailure)
@@ -68,8 +68,28 @@ const addHandlers = () => {
   // $('.index-and-show-climb').on('submit', onIndexAnShow);
   $('.create-climb').on('submit', onCreate);
   $('.update-climb').on('submit', onUpdate);
-  $('.destroy-climb').on('submit', onDestroy);
+  // $('.destroy-climb').on('submit', onDestroy);
+
+  $('#delete-button').on('click', onDestroy);
+
+  // $('#delete').click(function(){
+  //   onDestroy();
+  // });
+
+  // $('#delete').live("click", function(event){
+  //   onDestroy(event);
+  // });
+
+  // $('#delete').on('click', '.dynamicElement', function() {
+  //   onDestroy();
+  // });
+
+  // $('document').on('click', '#delete', function() {
+  //   onDestroy();
+  // });
+
 };
+
 
 module.exports = {
   onIndexAnShow,
