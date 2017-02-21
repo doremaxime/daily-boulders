@@ -1,5 +1,6 @@
 'use strict';
 
+// const crudEvents = require('./events.js');
 const indexClimbsHandlerbars = require('../templates/helpers/index-climbs.handlebars');
 const showClimbsHandlerbars = require('../templates/helpers/show-climb.handlebars');
 
@@ -54,7 +55,7 @@ const createSuccess = (data) => {
   $('.clear-input-create').val('');
   $('#createClimbModalLabel').text('Create Climb');
   $('#createClimbModal').modal('hide');
-  // crudEvents.index?
+  // crudEvents.onIndexAnShow();
 };
 
 const createFailure = (data) => {
