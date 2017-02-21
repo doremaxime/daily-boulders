@@ -249,7 +249,7 @@
         </fieldset>
       </form> -->
 
-      <!-- SIGN IN -->
+      <!-- UPDATE CLIMB -->
       <button id="update-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#updateClimbModal">
         Update Climb
       </button>
@@ -277,13 +277,43 @@
         </div>
       </div>
 
-      <form class="destroy-climb">
+      <!-- DESTROY CLIMB -->
+      <button id="destroy-climb-primary-button" type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#destroyClimbModal">
+        Destroy Climb
+      </button>
+
+      <div id="destroyClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="destroyClimbModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="destroyClimbModalLabel">Destroy Climb</h4>
+            </div>
+            <form class="destroy-climb">
+                <fieldset>
+                  <legend id="destroy-title"></legend>
+                  <input class="clear-input-destroy" type="text" name="climb[id]" placeholder="climb id"><br><br>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+        </div>
+      </div>
+
+      <!-- <form class="destroy-climb">
         <fieldset>
           <legend id="destroy-title">Destroy Climb</legend>
-          <input class="clear-input-destroy" type="text" name="climb[id]" placeholder="climb id">
+          <input class="clear-input-destroy" type="text" name="climb[id]" placeholder="climb id"><br><br>
           <input type="submit" name="submit" value="destroy Climb">
         </fieldset>
-      </form>
+      </form> -->
+
+
+
+
     </div>
 </div>
 

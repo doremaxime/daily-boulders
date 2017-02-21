@@ -17,7 +17,6 @@ function shakeForm() {
 function resetTitles() {
   $('#index-show-title').text('show Climbs');
   $('#createClimbModalLabel').text('Create Climb');
-  $('#destroy-title').text('Destroy Climb');
 }
 
 const indexSuccess = (data) => {
@@ -87,13 +86,13 @@ const updateFailure = (data) => {
 const destroySuccess = (data) => {
   console.log(data);
   $('.clear-input-destroy').val('');
-  $('#destroy-title').text('bye bye climb');
+  $('.modal').modal('hide');
 };
 
 const destroyFailure = (data) => {
   console.log(data);
   $('.clear-input-destroy').val('');
-  $('#destroy-title').text('ID is not valid or existant');
+  shakeForm();
 };
 
 module.exports = {
