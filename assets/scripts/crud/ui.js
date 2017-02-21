@@ -62,15 +62,14 @@ const showFailure = (data) => {
 const createSuccess = (data) => {
   console.log(data.book);
   $('.clear-input-create').val('');
-  $('#createClimbModalLabel').text('Create Climb');
   $('#createClimbModal').modal('hide');
   // crudEvents.onIndexAnShow();
 };
 
 const createFailure = (data) => {
   console.log(data);
-  $('.clear-input-create').val('');
-  $('#createClimbModalLabel').text('hmmm... something was not entered right');
+  // $('.clear-input-create').val('');
+  shakeForm();
 };
 
 const updateSuccess = (data) => {
