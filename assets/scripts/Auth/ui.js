@@ -1,6 +1,6 @@
 'use strict';
 
-const crud = require('../crud/ui');
+// const crud = require('../crud/ui');
 // const indexClimbsHandlerbars = require('../templates/helpers/index-climbs.handlebars');
 const crudEvents = require('../crud/events');
 
@@ -76,7 +76,7 @@ const signOutSuccess = (data) => {
   $('.clear-input-update').val('');
   $('.clear-input-destroy').val('');
   $('.table-striped').css('display', 'none');
-  crud.resetTitles();
+  // crud.resetTitles();
 
   $('#change-password-primary-button').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'unset');
@@ -85,7 +85,7 @@ const signOutSuccess = (data) => {
   $('#sign-out-button').css('display', 'none');
 
   // This is the carousel
-  $('.container').css('display', 'initial');
+  $('.container').css('display', 'unset');
 };
 
 const signOutFailure = (data) => {
