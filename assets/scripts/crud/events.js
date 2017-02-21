@@ -55,9 +55,9 @@ const onUpdate = function (event) {
 const onDestroy = function (event) {
   event.preventDefault();
 
-  let data = getFormFields(event.target);
+let id = $(event.target).data('id');
 
-  api.destroy(data.climb.data_id)
+  api.destroy(id)
     .then(ui.destroySuccess)
     .then(onIndexAnShow)
     .catch(ui.destroyFailure)
@@ -70,24 +70,9 @@ const addHandlers = () => {
   $('.update-climb').on('submit', onUpdate);
   // $('.destroy-climb').on('submit', onDestroy);
 
-  $('#delete-button').on('click', onDestroy);
+  // $('#delete-button').on('click', onDestroy);
 
-  // $('#delete').click(function(){
-  //   onDestroy();
-  // });
-
-  // $('#delete').live("click", function(event){
-  //   onDestroy(event);
-  // });
-
-  // $('#delete').on('click', '.dynamicElement', function() {
-  //   onDestroy();
-  // });
-
-  // $('document').on('click', '#delete', function() {
-  //   onDestroy();
-  // });
-
+  $('.index').on('click', '.trash', onDestroy);
 };
 
 
