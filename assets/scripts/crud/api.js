@@ -36,7 +36,7 @@ const create = function (data) {
 
 const update = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/climbs/' + data.climb.id,
+    url: config.apiOrigin + '/climbs/' + data, //data.climb.id
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,

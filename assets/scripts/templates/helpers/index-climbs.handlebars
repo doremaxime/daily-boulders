@@ -13,7 +13,30 @@
       <th scope="row">{{climb.id}}</th>
       <td>{{climb.date}}</td>
       <td>{{climb.grade}}</td>
-      <td><button id="update-climb-primary-button" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateClimbModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button></td>
+      <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateClimbModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+      <div id="updateClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="createClimbModalLabel">Update Climb</h4>
+            </div>
+            <form class="update-climb">
+              <fieldset>
+                <input class="clear-input-update" type="text" name="climb[id]" placeholder="id"><br><br>
+                <input class="clear-input-update" type="date" name="climb[date]" placeholder="date: e.g. 2000-12-20"><br><br>
+                <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3"><br><br>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <input data-id="{{climb}}" type="submit" class="btn update btn-primary" name="submit" value="Submit">
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+</td>
+
       <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#destroyClimbModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
         <div id="destroyClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="destroyClimbModalLabel">
           <div class="modal-dialog" role="document">
@@ -24,7 +47,7 @@
               </div>
               <div class="handlebar-id-placer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Nope</button>
-                <input data-id="{{climb.id}}" type="submit" class="btn trash btn-primary" name="submit" value="Yaaaasss"><br><br>
+                <input data-id="{{climb.id}}" type="submit" class="btn destroy btn-primary" name="submit" value="Yaaaasss"><br><br>
               </div>
             </div>
           </div>
