@@ -37,9 +37,10 @@ const onUpdate = function (event) {
 const onDestroy = function (event) {
   event.preventDefault();
 
-let id = $(event.target).data('id');
+  let id = $(event.target).data('id');
   // let id = (event.target).data;
   // let id = $(event.target).data;
+  console.log(id);
 
 
   api.destroy(id)
