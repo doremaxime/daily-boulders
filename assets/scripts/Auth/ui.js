@@ -1,7 +1,5 @@
 'use strict';
 
-// const crud = require('../crud/ui');
-// const indexClimbsHandlerbars = require('../templates/helpers/index-climbs.handlebars');
 const crudEvents = require('../crud/events');
 
 function shakeForm() {
@@ -23,7 +21,6 @@ const signUpSuccess = (data) => {
 
 const signUpFailure = (data) => {
   console.log(data);
-  // $('#signInModalLabel').text('E-mail already taken or passwords did not match');
   shakeForm();
 };
 
@@ -43,7 +40,6 @@ const signInSuccess = (data) => {
 
 const signInFailure = (data) => {
   console.log(data);
-  // $('#signInModalLabel').text('Wrong email or password');
   shakeForm();
 
 };
@@ -51,22 +47,18 @@ const signInFailure = (data) => {
 const changePasswordSuccess = (data) => {
   console.log(data);
   $('.clear-input').val('');
-  // $('#changePasswordModalLabel').text("Change Password");
   $('#changePasswordModal').modal('hide');
 };
 
 const changePasswordFailure = (data) => {
   console.log(data);
-  // $('#changePasswordModalLabel').text("Current password does not match");
   shakeForm();
 };
 
 const signOutSuccess = (data) => {
   console.log(data);
   $('#sign-out-button').css('display', 'none');
-  // $('#sign-out').css('display', 'none');
   $('#change-password-primary-button').css('display', 'none');
-  // $('#change-password').css('display', 'none');
   $('.crud-container').css('display', 'none');
   $('#sign-up-primary-button').css('display', 'unset');
   $('#sign-in-primary-button').css('display', 'unset');
@@ -75,9 +67,6 @@ const signOutSuccess = (data) => {
   $('.clear-input-create').val('');
   $('.clear-input-update').val('');
   $('.clear-input-destroy').val('');
-  // $('.table-striped').css('display', 'none');
-
-  // $('#create-climb-primary-button').css('display', 'none');
   $('.container').css('display', 'unset'); // This is the carousel
 };
 

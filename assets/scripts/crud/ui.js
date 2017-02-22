@@ -46,9 +46,10 @@ const createFailure = (data) => {
   shakeForm();
 };
 
-const updateSuccess = (data) => {
-  console.log(data);
-  $('.modal').modal('hide');
+const updateSuccess = (id) => {
+  console.log(id);
+  $('.updateClimbModal'+id).modal('toggle');
+  $('.modal-backdrop').remove();
 };
 
 const updateFailure = (data) => {

@@ -25,11 +25,11 @@ const onCreate = function (event) {
 const onUpdate = function (event) {
   event.preventDefault();
 
-  let data = getFormFields(event.target);
- let id = (event.target).data_id;
+  let id = $(event.target).data('climb');
+  let userInput = getFormFields(event.target);
 
-  api.update(data, id)
-    .then(ui.updateSuccess)
+  api.update(userInput, id)
+    .then(ui.updateSuccess(id))
     .then(onIndex)
     .catch(ui.updateFailure);
 };
@@ -38,10 +38,6 @@ const onDestroy = function (event) {
   event.preventDefault();
 
   let id = $(event.target).data('id');
-  // let id = (event.target).data;
-  // let id = $(event.target).data;
-  console.log(id);
-
 
   api.destroy(id)
     .then(ui.destroySuccess)
@@ -52,8 +48,7 @@ const onDestroy = function (event) {
 
 const addHandlers = () => {
   $('.create-climb').on('submit', onCreate);
-  $('.update-climb').on('submit', onUpdate);
-  $('.index').on('click', '.update', onUpdate);
+  $('.index').on('submit', '.update-climb', onUpdate);
   $('.index').on('click', '.destroy', onDestroy);
 };
 

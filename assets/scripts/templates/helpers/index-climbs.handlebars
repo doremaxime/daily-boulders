@@ -13,22 +13,69 @@
       <th scope="row">{{climb.id}}</th>
       <td>{{climb.date}}</td>
       <td>{{climb.grade}}</td>
-      <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateClimbModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
-      <div id="updateClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
+      <td><button  data-id="{{climb.id}}" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateClimbModal{{climb.id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
+      <div id="updateClimbModal{{climb.id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title" id="createClimbModalLabel">Update Climb</h4>
             </div>
-            <form class="update-climb">
+            <form class="update-climb"  data-climb="{{climb.id}}">
               <fieldset>
-                <input class="clear-input-update" type="text" name="climb[{{climb.id}}]"><br><br>
-                <input class="clear-input-update" type="date" name="climb[date]" placeholder="date: e.g. 2000-12-20"><br><br>
-                <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3"><br><br>
+                <input class="clear-input-update" type="date" name="climb[date]"><br><br>
+                <select  class="btn btn-secondary dropdown-toggle" type="button" name="climb[grade]" id="dropdownMenuButtonUpdate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <option></option>
+                  <option value = "V0">V0</option>
+                  <option value = "V1">V1</option>
+                  <option value = "V2">V2</option>
+                  <option value = "V2+">V2+</option>
+                  <option value = "V3-">V3-</option>
+                  <option value = "V3">V3</option>
+                  <option value = "V3+">V3+</option>
+                  <option value = "V4-">V4-</option>
+                  <option value = "V4">V4</option>
+                  <option value = "V4+">V4+</option>
+                  <option value = "V5-">V5-</option>
+                  <option value = "V5">V5</option>
+                  <option value = "V5+">V5+</option>
+                  <option value = "V6-">V6-</option>
+                  <option value = "V6">V6</option>
+                  <option value = "V6+">V6+</option>
+                  <option value = "V7-">V7-</option>
+                  <option value = "V7">V7</option>
+                  <option value = "V7+">V7+</option>
+                  <option value = "V8-">V8-</option>
+                  <option value = "V8">V8</option>
+                  <option value = "V8+">V8+</option>
+                  <option value = "V9-">V9-</option>
+                  <option value = "V9">V9</option>
+                  <option value = "V9+">V9+</option>
+                  <option value = "V10-">V10-</option>
+                  <option value = "V10">V10</option>
+                  <option value = "V10+">V10+</option>
+                  <option value = "V11-">V11-</option>
+                  <option value = "V11">V11</option>
+                  <option value = "V11+">V11+</option>
+                  <option value = "V12-">V12-</option>
+                  <option value = "V12">V12</option>
+                  <option value = "V12+">V12+</option>
+                  <option value = "V13-">V13-</option>
+                  <option value = "V13">V13</option>
+                  <option value = "V13+">V13+</option>
+                  <option value = "V14-">V14-</option>
+                  <option value = "V14">V14</option>
+                  <option value = "V14+">V14+</option>
+                  <option value = "V15-">V15-</option>
+                  <option value = "V15">V15</option>
+                  <option value = "V15+">V15+</option>
+                  <option value = "V16-">V16-</option>
+                  <option value = "V16">V16</option>
+                  <option value = "V16+">V16+</option>
+                </select>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <input type="submit" class="btn update btn-primary" name="submit" value="Submit">
+                  <input data-id="{{climb.id}}" type="submit" class="btn update btn-primary" name="submit" value="Submit">
                 </div>
               </fieldset>
             </form>
@@ -36,7 +83,6 @@
         </div>
       </div>
 </td>
-
       <td><button data-id="{{climb.id}}" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#destroyClimbModal{{climb.id}}"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
         <div id="destroyClimbModal{{climb.id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="destroyClimbModalLabel">
           <div class="modal-dialog" role="document">
@@ -53,7 +99,6 @@
           </div>
         </div>
       </td>
-
     </tr>
   {{/each}}
 </tbody>
