@@ -60,13 +60,10 @@ const createSuccess = (data) => {
   $('.clear-input-create').val('');
   $('#createClimbModal').modal('hide');
   $('#dropdownMenuButton').find('option:first').attr('selected', 'selected');
-
-  // crudEvents.onIndexAnShow();
 };
 
 const createFailure = (data) => {
   console.log(data);
-  // $('.clear-input-create').val('');
   shakeForm();
 };
 

@@ -4,29 +4,11 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
-const onIndexAnShow = function () {
-  // event.preventDefault();
-  // let climbId = $('#climb-id').val();
-  // console.log(climbId);
-  // if (climbId.length === 0) {
+const onIndex = function () {
     api.index()
     .then(ui.indexSuccess)
     .catch(ui.indexFailure);
-  // } else {
-  //   api.show(climbId)
-  //   .then(ui.showSuccess)
-  //   .catch(ui.showFailure);
-  // }
-
 };
-
-// const onIndexFromSignIn = function (event) {
-//   console.log(1);
-//   event.preventDefault();
-//   api.index()
-//     .then(ui.indexSuccess)
-//     .catch(ui.indexFailure);
-// };
 
 const onCreate = function (event) {
   event.preventDefault();
@@ -35,7 +17,7 @@ const onCreate = function (event) {
 
   api.create(data)
     .then(ui.createSuccess)
-    .then(onIndexAnShow)
+    .then(onIndex)
     .catch(ui.createFailure)
     ;
 };
@@ -47,7 +29,7 @@ const onUpdate = function (event) {
 
   api.update(data)
     .then(ui.updateSuccess)
-    .then(onIndexAnShow)
+    .then(onIndex)
     .catch(ui.updateFailure);
 };
 
@@ -58,27 +40,21 @@ let id = $(event.target).data('id');
 
   api.destroy(id)
     .then(ui.destroySuccess)
-    .then(onIndexAnShow)
+    .then(onIndex)
     .catch(ui.destroyFailure)
     ;
 };
 
 const addHandlers = () => {
-  // $('.index-and-show-climb').on('submit', onIndexAnShow);
   $('.create-climb').on('submit', onCreate);
   $('.update-climb').on('submit', onUpdate);
-  // $('.destroy-climb').on('submit', onDestroy);
-  // $('#delete-button').on('click', onDestroy);
-
   $('.index').on('click', '.update', onUpdate);
-
   $('.index').on('click', '.destroy', onDestroy);
 };
 
 
 module.exports = {
-  onIndexAnShow,
-  // onIndexFromSignIn,
+  onIndex,
   onCreate,
   onUpdate,
   onDestroy,

@@ -38,7 +38,7 @@ const signInSuccess = (data) => {
   $('#sign-out-button').css('display', 'unset');
   $('#change-password-primary-button').css('display', 'unset');
   $('#create-climb-primary-button').css('display', 'unset');
-  crudEvents.onIndexAnShow();
+  crudEvents.onIndex();
 };
 
 const signInFailure = (data) => {
