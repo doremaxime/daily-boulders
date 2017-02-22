@@ -43,14 +43,12 @@ const onCreate = function (event) {
 const onUpdate = function (event) {
   event.preventDefault();
 
-  // let data = getFormFields(event.target);
-  let data = $(event.target).data('id');
+  let data = getFormFields(event.target);
 
   api.update(data)
     .then(ui.updateSuccess)
     .then(onIndexAnShow)
-    .catch(ui.updateFailure)
-    ;
+    .catch(ui.updateFailure);
 };
 
 const onDestroy = function (event) {

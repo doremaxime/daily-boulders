@@ -59,6 +59,8 @@ const createSuccess = (data) => {
   console.log(data.book);
   $('.clear-input-create').val('');
   $('#createClimbModal').modal('hide');
+  $('#dropdownMenuButton').find('option:first').attr('selected', 'selected');
+
   // crudEvents.onIndexAnShow();
 };
 

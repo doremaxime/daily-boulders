@@ -23,12 +23,12 @@
             </div>
             <form class="update-climb">
               <fieldset>
-                <input class="clear-input-update" type="text" name="climb[id]" placeholder="id"><br><br>
+                <input class="clear-input-update" type="text" name="climb[{{climb.id}}]" placeholder="id"><br><br>
                 <input class="clear-input-update" type="date" name="climb[date]" placeholder="date: e.g. 2000-12-20"><br><br>
                 <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3"><br><br>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <input data-id="{{climb}}" type="submit" class="btn update btn-primary" name="submit" value="Submit">
+                  <input type="submit" class="btn update btn-primary" name="submit" value="Submit">
                 </div>
               </fieldset>
             </form>
