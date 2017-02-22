@@ -32,9 +32,13 @@ $modal: #00f5d3;
   font-weight: 700;
 }
 
-#change-password-primary-button,
+#change-password-primary-button {
+  display: none;
+}
+
 #create-climb-primary-button {
   display: none;
+  margin-top: 30px;
 }
 
 #sign-out-button {
@@ -53,10 +57,12 @@ $modal: #00f5d3;
 }
 
 .table {
+  margin-top: 45px;
   margin-left: 30%;
   width: 40%;
   // height: 150px;
   // overflow: scroll;
+  // border-style: inset;
 }
 
 .update-delete-container {

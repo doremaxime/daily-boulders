@@ -23,7 +23,7 @@
             </div>
             <form class="update-climb">
               <fieldset>
-                <input class="clear-input-update" type="text" name="climb[{{climb.id}}]" placeholder="id"><br><br>
+                <input class="clear-input-update" type="text" name="climb[{{climb.id}}]"><br><br>
                 <input class="clear-input-update" type="date" name="climb[date]" placeholder="date: e.g. 2000-12-20"><br><br>
                 <input class="clear-input-update" type="text" name="climb[grade]" placeholder="gade: e.g. V3"><br><br>
                 <div class="modal-footer">
@@ -37,7 +37,7 @@
       </div>
 </td>
 
-      <td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#destroyClimbModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+      <td><button data-id="{{climb.id}}" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#destroyClimbModal"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
         <div id="destroyClimbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="destroyClimbModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">

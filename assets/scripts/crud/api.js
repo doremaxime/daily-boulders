@@ -34,9 +34,9 @@ const create = function (data) {
   });
 };
 
-const update = function (data) {
+const update = function (data, id) {
   return $.ajax({
-    url: config.apiOrigin + '/climbs/' + data.climb.id,
+    url: config.apiOrigin + '/climbs/' + id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,

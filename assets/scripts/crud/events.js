@@ -26,8 +26,9 @@ const onUpdate = function (event) {
   event.preventDefault();
 
   let data = getFormFields(event.target);
+ let id = (event.target).data_id;
 
-  api.update(data)
+  api.update(data, id)
     .then(ui.updateSuccess)
     .then(onIndex)
     .catch(ui.updateFailure);
@@ -37,6 +38,9 @@ const onDestroy = function (event) {
   event.preventDefault();
 
 let id = $(event.target).data('id');
+  // let id = (event.target).data;
+  // let id = $(event.target).data;
+
 
   api.destroy(id)
     .then(ui.destroySuccess)
