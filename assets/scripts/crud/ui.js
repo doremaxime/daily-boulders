@@ -12,7 +12,7 @@ function shakeForm() {
 }
 
 const indexSuccess = (data) => {
-  console.table(data.climbs);
+  // console.table(data.climbs);
   $('.update-delete-container').css('display', 'unset');
   $('.index').css('display', 'unset');
   let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climbs });
@@ -20,7 +20,7 @@ const indexSuccess = (data) => {
 };
 
 const indexFailure = (data) => {
-  console.log(data);
+  // console.log(data);
 };
 
 // const showSuccess = (data) => {
@@ -35,35 +35,35 @@ const indexFailure = (data) => {
 // };
 
 const createSuccess = (data) => {
-  console.log(data.book);
+  // console.log(data.book);
   $('.clear-input-create').val('');
   $('#createClimbModal').modal('hide');
   $('#dropdownMenuButton').find('option:first').attr('selected', 'selected');
 };
 
 const createFailure = (data) => {
-  console.log(data);
+  // console.log(data);
   shakeForm();
 };
 
 const updateSuccess = (id) => {
-  console.log(id);
+  // console.log(id);
   $('.updateClimbModal'+id).modal('toggle');
   $('.modal-backdrop').remove();
 };
 
 const updateFailure = (data) => {
-  console.log(data);
+  // console.log(data);
   shakeForm();
 };
 
 const destroySuccess = (data) => {
-  console.log(data);
+  // console.log(data);
   $('.modal').modal('hide');
 };
 
 const destroyFailure = (data) => {
-  console.log(data);
+  // console.log(data);
   shakeForm();
 };
 
