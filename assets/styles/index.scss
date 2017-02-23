@@ -45,8 +45,8 @@ body {
 
 #create-climb-primary-button {
   display: none;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 #sign-out-button {
@@ -64,6 +64,8 @@ body {
 clear: inherit;
  display: none;
   padding-top: 60px;
+  // overflow-y: auto;
+  // display: block;
 }
 
 .table-striped {
@@ -72,7 +74,7 @@ clear: inherit;
   width: 50%;
   height: 10%;
   padding: 20px;
-  overflow-y: auto;
+  // overflow: auto;
   // display: block;
 }
 
@@ -80,10 +82,20 @@ clear: inherit;
   display: none;
 }
 
-footer {
-  font-size: 15px;
-  // height: 20px;
-  margin-top: 50px;
-  position: relative;
-  text-align: center;
+// footer {
+//   font-size: 15px;
+//   // height: 20px;
+//   margin-top: 50px;
+//   position: relative;
+//   text-align: center;
+// }
+
+@media (max-width: 500px) {
+
+  .slider-size {
+    margin: auto;
+    max-height: 300px;
+    min-height: 300px;
+    max-width: 300px;
+  }
 }
