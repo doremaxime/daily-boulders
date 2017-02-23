@@ -40,15 +40,20 @@ body {
 
 #change-password-primary-button {
   display: none;
+  float: right;
 }
 
 #create-climb-primary-button {
   display: none;
   margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 #sign-out-button {
+  clear: both;
+  margin-top: 5px;
   display: none;
+  float: right;
 }
 
 .crud-container {
@@ -56,24 +61,29 @@ body {
 }
 
 .index {
-  display: none;
-  // margin: 0, auto;
-  // overflow-y: auto;
-  // max-height: 10px;
-  // background: pink;
+clear: inherit;
+ display: none;
+  padding-top: 60px;
 }
 
-.table-header {
-  // border-style: solid;
-}
-
-.table {
+.table-striped {
   border: 7px solid #bed5cd;
-  margin-top: 45px;
-  margin-left: 30%;
-  width: 40%;
+  margin: auto;
+  width: 50%;
+  height: 10%;
+  padding: 20px;
+  overflow-y: auto;
+  // display: block;
 }
 
 .update-delete-container {
   display: none;
+}
+
+footer {
+  font-size: 15px;
+  // height: 20px;
+  margin-top: 50px;
+  position: relative;
+  text-align: center;
 }
