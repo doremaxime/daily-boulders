@@ -38,7 +38,7 @@ const onDestroy = function (event) {
   event.preventDefault();
 
   let id = $(event.target).data('id');
-
+console.log(id);
   api.destroy(id)
     .then(ui.destroySuccess(id))
     .then(onIndex)
