@@ -38,9 +38,10 @@ const onDestroy = function (event) {
   event.preventDefault();
 
   let id = $(event.target).data('id');
-console.log(id);
+  let pass = $(event.target).data('climb');
+
   api.destroy(id)
-    .then(ui.destroySuccess(id))
+    .then(ui.destroySuccess(pass))
     .then(onIndex)
     .catch(ui.destroyFailure);
 };

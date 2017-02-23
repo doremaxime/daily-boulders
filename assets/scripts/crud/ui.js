@@ -55,9 +55,9 @@ const updateFailure = (data) => {
   shakeForm();
 };
 
-const destroySuccess = (id) => {
+const destroySuccess = (pass) => {
   // console.log(data);
-  $('.destroyClimbModal'+id).modal('toggle');
+  $('.destroyClimbModal'+pass).modal('toggle');
   $('.modal').modal('hide');
 };
 
