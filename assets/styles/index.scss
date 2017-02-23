@@ -5,7 +5,7 @@ $background: #00d3b6;
 $buttons: #60dc46;
 $modal: #00f5d3;
 
-.body-container {
+body {
   background-color: $background;
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -21,15 +21,21 @@ $modal: #00f5d3;
   background: $modal;
 }
 
+.container { //carousel
+  margin: -40px, 0, 0, 0;
+  width: 100%;
+}
+
 .slider-size {
   margin: auto;
   max-height: 600px;
   min-height: 600px;
+  max-width: 600px;
+  // min-width: 600px;
 }
 
 .text-center {
   text-align: center;
-  font-weight: 700;
 }
 
 #change-password-primary-button {

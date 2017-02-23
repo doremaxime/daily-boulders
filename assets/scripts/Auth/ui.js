@@ -13,18 +13,18 @@ function shakeForm() {
 }
 
 const signUpSuccess = (data) => {
-  console.log(data);
+  // console.log(data);
   $('#sign-up-primary-button').css('display', 'none');
   $('#signUpModal').modal('hide');
 };
 
 const signUpFailure = (data) => {
-  console.log(data);
+  // console.log(data);
   shakeForm();
 };
 
 const signInSuccess = (data) => {
-  console.log(data);
+  // console.log(data);
   $('.clear-input').val('');
   $('#signInModal').modal('hide');
   $('.container').css('display', 'none');  // This is the carousel
@@ -38,23 +38,23 @@ const signInSuccess = (data) => {
 };
 
 const signInFailure = (data) => {
-  console.log(data);
+  // console.log(data);
   shakeForm();
 };
 
 const changePasswordSuccess = (data) => {
-  console.log(data);
+  // console.log(data);
   $('.clear-input').val('');
   $('#changePasswordModal').modal('hide');
 };
 
 const changePasswordFailure = (data) => {
-  console.log(data);
+  // console.log(data);
   shakeForm();
 };
 
 const signOutSuccess = (data) => {
-  console.log(data);
+  // console.log(data);
   $('#sign-out-button').css('display', 'none');
   $('#change-password-primary-button').css('display', 'none');
   $('.crud-container').css('display', 'none');
@@ -69,7 +69,7 @@ const signOutSuccess = (data) => {
 };
 
 const signOutFailure = (data) => {
-  console.log(data);
+  // console.log(data);
 };
 
 module.exports = {
