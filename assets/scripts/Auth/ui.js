@@ -1,5 +1,6 @@
 'use strict';
 
+const authEvents = require('./events');
 const crudEvents = require('../crud/events');
 
 function shakeForm() {
@@ -12,11 +13,11 @@ function shakeForm() {
 
 }
 
-
 const signUpSuccess = (data) => {
   console.log(data);
   $('#sign-up-primary-button').css('display', 'none');
   $('#signUpModal').modal('hide');
+  // authEvents.onSignIn(event);
 };
 
 const signUpFailure = (data) => {

@@ -12,15 +12,13 @@ function shakeForm() {
 }
 
 const indexSuccess = (data) => {
-  // console.table(data.climbs);
   $('.update-delete-container').css('display', 'unset');
   $('.index').css('display', 'unset');
   let indexClimbsHtml = indexClimbsHandlerbars({ climbs: data.climbs });
   $('.table-striped').html(indexClimbsHtml);
 };
 
-const indexFailure = (data) => {
-  // console.log(data);
+const indexFailure = () => {
 };
 
 // const showSuccess = (data) => {
@@ -57,8 +55,9 @@ const updateFailure = (data) => {
   shakeForm();
 };
 
-const destroySuccess = (data) => {
+const destroySuccess = (id) => {
   // console.log(data);
+  $('.destroyClimbModal'+id).modal('toggle');
   $('.modal').modal('hide');
 };
 

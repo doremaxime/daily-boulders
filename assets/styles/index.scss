@@ -51,18 +51,21 @@ $modal: #00f5d3;
 
 .index {
   display: none;
-  // height: 20px;
-  // overflow: auto;
-  // width: 150px;
+  // margin: 0, auto;
+  // overflow-y: auto;
+  // max-height: 10px;
+  // background: pink;
+}
+
+.table-header {
+  // border-style: solid;
 }
 
 .table {
+  border: 7px solid #bed5cd;
   margin-top: 45px;
   margin-left: 30%;
   width: 40%;
-  // height: 150px;
-  // overflow: scroll;
-  // border-style: inset;
 }
 
 .update-delete-container {

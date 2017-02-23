@@ -40,10 +40,9 @@ const onDestroy = function (event) {
   let id = $(event.target).data('id');
 
   api.destroy(id)
-    .then(ui.destroySuccess)
+    .then(ui.destroySuccess(id))
     .then(onIndex)
-    .catch(ui.destroyFailure)
-    ;
+    .catch(ui.destroyFailure);
 };
 
 const addHandlers = () => {

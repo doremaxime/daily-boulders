@@ -1,17 +1,15 @@
 <thead>
-  <tr>
-    <th>ID</th>
-    <th class="text-center">Date</th>
-    <th class="text-center">Grade</th>
-    <th class="text-center">Edit</th>
-    <th class="text-center">Delete</th>
+  <tr class="table-header">
+    <th class="text-center">DATE</th>
+    <th class="text-center">GRADE</th>
+    <th class="text-center">EDIT</th>
+    <th class="text-center">DELETE</th>
   </tr>
 </thead>
 <tbody>
   {{#each climbs as |climb|}}
     <tr data-id="{{climb.id}}">
-      <th scope="row">{{climb.id}}</th>
-      <td>{{climb.date}}</td>
+      <td scope="row">{{climb.date}}</td>
       <td>{{climb.grade}}</td>
       <td><button  data-id="{{climb.id}}" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#updateClimbModal{{climb.id}}"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></button>
       <div id="updateClimbModal{{climb.id}}" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="createClimbModalLabel">

@@ -26,7 +26,6 @@ const onSignUp = function (event) {
 
   api.signUp(data)
   .then(ui.signUpSuccess)
-  // .then(onSignIn(event))
   .catch(ui.signUpFailure);
 };
 
