@@ -38,10 +38,9 @@ const onDestroy = function (event) {
   event.preventDefault();
 
   let id = $(event.target).data('id');
-  let pass = $(event.target).data('id');
 
   api.destroy(id)
-    .then(ui.destroySuccess(pass))
+    .then(ui.destroySuccess(id))
     .then(onIndex)
     .catch(ui.destroyFailure);
 };
