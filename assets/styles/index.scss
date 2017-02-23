@@ -11,6 +11,18 @@ body {
   text-align: center;
 }
 
+#sign-in-primary-button {
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+#sign-up-primary-button {
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
 .btn:hover,
 .btn:active,
 .btn:visited {
@@ -28,8 +40,8 @@ body {
 
 .slider-size {
   margin: auto;
-  max-height: 600px;
-  min-height: 600px;
+  max-height: 700px;
+  min-height: 700px;
   max-width: 600px;
   // min-width: 600px;
 }
