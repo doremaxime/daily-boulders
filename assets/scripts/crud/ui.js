@@ -56,7 +56,7 @@ const updateFailure = (data) => {
 };
 
 const destroySuccess = (pass) => {
-  console.log(pass);
+  // console.log(pass);
   // $('.destroyClimbModal'+pass).modal('toggle');
   $('.modal').modal('hide');
 };
