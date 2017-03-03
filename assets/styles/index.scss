@@ -99,16 +99,16 @@ body {
 .index {
   height: 100px;
   overflow-y: scroll;
-  width: 50%;
+  width: 70%;
 }
 
 .table-striped {
   border: 7px solid #bed5cd;
   font-size: 17px;
   margin: auto;
-  width: 50%;
+  width: 70%;
   height: 100px;
-  // background: $table-background;
+  background-color: rgba(255, 255, 255, 0.8);
   // overflow: scroll;
 }
 
@@ -158,11 +158,11 @@ th.text-center {
   }
 
   #change-password-primary-button {
-    margin-right: 13%;
+    margin-right: 5%;
   }
 
   #sign-out-button {
-    margin-right: 13%;
+    margin-right: 5%;
   }
 
   tbody {
