@@ -1,14 +1,20 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$background: #00d3b6;
-$buttons: #60dc46;
-$modal: #00f5d3;
+$background: #c79363;
+$buttons-visited: #C4EE71;
+$buttons: #A2D144;
+$modal: #BA8F67;
+$table-head: #c79363;
+$table-background: #8B5019;
+$font-white: #fafafa;
+$font-black: #000;
 
 body {
   background-color: $background;
   font-family: 'Raleway', sans-serif;
   text-align: center;
+  color: $font-black;
 }
 
 #sign-in-primary-button {
@@ -23,14 +29,20 @@ body {
 
 }
 
+.btn {
+  background-color: $buttons;
+  color: #3b5998;
+}
+
 .btn:hover,
 .btn:active,
 .btn:visited {
-  background-color: $buttons;
+  background-color: $buttons-visited;
 }
 
 .modal-content {
   background: $modal;
+  color: $font-black;
 }
 
 .container { //carousel
@@ -41,8 +53,8 @@ body {
 .slider-size {
   margin: auto;
   max-height: 750px;
-  min-height: 750px;
   max-width: 600px;
+  min-height: 750px;
   // min-width: 600px;
 }
 
@@ -53,6 +65,7 @@ body {
 #change-password-primary-button {
   display: none;
   float: right;
+  margin-right: 10px;
 }
 
 #create-climb-primary-button {
@@ -66,6 +79,7 @@ body {
   margin-top: 5px;
   display: none;
   float: right;
+  margin-right: 10px;
 }
 
 .crud-container {
@@ -73,21 +87,31 @@ body {
 }
 
 .index {
-clear: inherit;
- display: none;
-  padding-top: 60px;
-  // overflow-y: auto;
-  // display: block;
+  height: 100px;
+  overflow-y: scroll;
+  width: 50%;
 }
 
 .table-striped {
   border: 7px solid #bed5cd;
+  font-size: 17px;
   margin: auto;
   width: 50%;
-  height: 10%;
-  padding: 20px;
-  // overflow: auto;
-  // display: block;
+  height: 100px;
+  // background: $table-background;
+  // overflow: scroll;
+}
+
+tbody {
+  font-size: 20px;
+  // color: $font-black;
+}
+
+th {
+  font-size: 25px;
+  font-family: 'Raleway', sans-serif;
+  // background: $table-head;
+  // color: $font-black;
 }
 
 .update-delete-container {
