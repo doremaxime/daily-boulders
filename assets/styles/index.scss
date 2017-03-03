@@ -99,14 +99,14 @@ body {
 .index {
   height: 100px;
   overflow-y: scroll;
-  width: 70%;
+  width: 50%;
 }
 
 .table-striped {
   border: 7px solid #bed5cd;
   font-size: 17px;
   margin: auto;
-  width: 70%;
+  width: 50%;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.8);
   // overflow: scroll;
@@ -138,6 +138,11 @@ th.text-center {
 
 @media (max-width: 500px) {
 
+  body {
+    background: url(http://www.pptbackgrounds.org/uploads/earth-tones-antique-paper-powerpoint-backgrounds.jpg);
+    background-size: auto;
+  }
+
   .slider-size {
     margin: auto;
     max-height: 300px;
@@ -147,6 +152,7 @@ th.text-center {
 
   .table-striped {
     border: 5px solid #bed5cd;
+    width: 50%;
   }
 
   h3 {
