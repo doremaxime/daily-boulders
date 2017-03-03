@@ -12,10 +12,12 @@ $font-black: #000;
 
 body {
   // background-color: $background;
-  background-image: radial-gradient(
-      #fafafa,
-      #c79363
-    );
+  // background-image: radial-gradient(
+  //     #fafafa,
+  //     #c79363
+  //   );
+  background: url(http://www.pptbackgrounds.org/uploads/earth-tones-antique-paper-powerpoint-backgrounds.jpg);
+  background-size: cover;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: $font-black;
@@ -30,7 +32,26 @@ body {
 #sign-up-primary-button {
   margin-bottom: 20px;
   margin-top: 20px;
+}
 
+#change-password-primary-button {
+  display: none;
+  float: right;
+  margin-right: 104%;
+}
+
+#sign-out-button {
+  clear: both;
+  margin-top: 5px;
+  display: none;
+  float: right;
+  margin-right: 104%;
+}
+
+#create-climb-primary-button {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .btn {
@@ -55,7 +76,8 @@ body {
 }
 
 .carousel-control.left, .carousel-control.right {
-    background-image: none
+    background-image: none;
+    color: $font-black;
 }
 
 .slider-size {
@@ -68,26 +90,6 @@ body {
 
 .text-center {
   text-align: center;
-}
-
-#change-password-primary-button {
-  display: none;
-  float: right;
-  margin-right: 10px;
-}
-
-#create-climb-primary-button {
-  display: none;
-  margin-top: 20px;
-  margin-bottom: 25px;
-}
-
-#sign-out-button {
-  clear: both;
-  margin-top: 5px;
-  display: none;
-  float: right;
-  margin-right: 10px;
 }
 
 .crud-container {
@@ -115,7 +117,7 @@ tbody {
   // color: $font-black;
 }
 
-th {
+th.text-center {
   font-size: 25px;
   font-family: 'Raleway', sans-serif;
   // background: $table-head;
@@ -153,5 +155,21 @@ th {
 
   p {
     font-size: 10px;
+  }
+
+  #change-password-primary-button {
+    margin-right: 13%;
+  }
+
+  #sign-out-button {
+    margin-right: 13%;
+  }
+
+  tbody {
+    font-size: 15px;
+  }
+
+  th.text-center {
+    font-size: 18px;
   }
 }
