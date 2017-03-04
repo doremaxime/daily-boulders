@@ -49,7 +49,6 @@ const addHandlers = () => {
   $('.create-climb').on('submit', onCreate);
   $('.index').on('submit', '.update-climb', onUpdate);
   $('.index').on('click', '.destroy', onDestroy);
-  $(".btn").mouseup(function(){$(this).blur();});
 };
 
 
