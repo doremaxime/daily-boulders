@@ -5,6 +5,19 @@ const api = require('./api');
 const ui = require('./ui');
 const store = require('../store');
 
+// User can sign up
+const onSignUp = function (event) {
+  event.preventDefault();
+
+  let data = getFormFields(event.target);
+
+  api.signUp(data)
+  .then(ui.signUpSuccess)
+  // .then(onSignIn(event))
+  .catch(ui.signUpFailure);
+};
+
+// User can sign in
 const onSignIn = function (event) {
   event.preventDefault();
 
@@ -19,19 +32,7 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure);
 };
 
-const onSignUp = function (event) {
-  event.preventDefault();
-
-  let data = getFormFields(event.target);
-
-  api.signUp(data)
-  .then(ui.signUpSuccess)
-  // .then(onSignIn(event))
-  .catch(ui.signUpFailure);
-};
-
-
-
+// User can change her password
 const onChangePassword = function (event) {
   event.preventDefault();
 
@@ -43,6 +44,7 @@ const onChangePassword = function (event) {
     ;
 };
 
+// User can sign out
 const onSignOut = function (event) {
   event.preventDefault();
 

@@ -4,13 +4,15 @@ const getFormFields = require(`../../../lib/get-form-fields`);
 const api = require('./api');
 const ui = require('./ui');
 
-const onIndex = function () {
-    api.index()
+// Gets all the climbs
+const onIndex = function() {
+  api.index()
     .then(ui.indexSuccess)
     .catch(ui.indexFailure);
 };
 
-const onCreate = function (event) {
+// Creates a new climb
+const onCreate = function(event) {
   event.preventDefault();
 
   let data = getFormFields(event.target);
@@ -18,11 +20,11 @@ const onCreate = function (event) {
   api.create(data)
     .then(ui.createSuccess)
     .then(onIndex)
-    .catch(ui.createFailure)
-    ;
+    .catch(ui.createFailure);
 };
 
-const onUpdate = function (event) {
+// Updates a climb
+const onUpdate = function(event) {
   event.preventDefault();
 
   let id = $(event.target).data('climb');
@@ -34,7 +36,8 @@ const onUpdate = function (event) {
     .catch(ui.updateFailure);
 };
 
-const onDestroy = function (event) {
+// Deletes a climb
+const onDestroy = function(event) {
   event.preventDefault();
 
   let id = $(event.target).data('id');
@@ -45,12 +48,12 @@ const onDestroy = function (event) {
     .catch(ui.destroyFailure);
 };
 
+// user can clck to create, update, or delete a climb.
 const addHandlers = () => {
   $('.create-climb').on('submit', onCreate);
   $('.index').on('submit', '.update-climb', onUpdate);
   $('.index').on('click', '.destroy', onDestroy);
 };
-
 
 module.exports = {
   onIndex,

@@ -1,7 +1,5 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-
-// $background: #c79363;
 $buttons-visited: #C4EE71;
 $buttons: #A2D144;
 $modal: #BA8F67;
@@ -11,12 +9,7 @@ $font-white: #fafafa;
 $font-black: #000;
 
 body {
-  // background-color: $background;
-  // background-image: radial-gradient(
-  //     #fafafa,
-  //     #c79363
-  //   );
-  background: url(http://www.pptbackgrounds.org/uploads/earth-tones-antique-paper-powerpoint-backgrounds.jpg);
+  background: url("http://www.pptbackgrounds.org/uploads/earth-tones-antique-paper-powerpoint-backgrounds.jpg");
   background-size: cover;
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -26,7 +19,6 @@ body {
 #sign-in-primary-button {
   margin-bottom: 30px;
   margin-top: 30px;
-
 }
 
 #sign-up-primary-button {
@@ -60,7 +52,6 @@ body {
 }
 
 .btn:hover,
-// .btn:active,
 .btn:visited {
   background-color: $buttons-visited;
 }
@@ -70,14 +61,16 @@ body {
   color: $font-black;
 }
 
-.container { //carousel
+.container {
+  //carousel
   margin: -40px, 0, 0, 0;
   width: 100%;
 }
 
-.carousel-control.left, .carousel-control.right {
-    background-image: none;
-    color: $font-black;
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  color: $font-black;
 }
 
 .slider-size {
@@ -85,7 +78,6 @@ body {
   max-height: 750px;
   max-width: 600px;
   min-height: 750px;
-  // min-width: 600px;
 }
 
 .text-center {
@@ -109,37 +101,23 @@ body {
   width: 50%;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.8);
-  // overflow: scroll;
 }
 
 tbody {
   font-size: 20px;
-  // color: $font-black;
 }
 
 th.text-center {
   font-size: 25px;
   font-family: 'Raleway', sans-serif;
-  // background: $table-head;
-  // color: $font-black;
 }
 
 .update-delete-container {
   display: none;
 }
-
-// footer {
-//   font-size: 15px;
-//   // height: 20px;
-//   margin-top: 50px;
-//   position: relative;
-//   text-align: center;
-// }
-
 @media (max-width: 500px) {
-
   body {
-    background: url(http://www.pptbackgrounds.org/uploads/earth-tones-antique-paper-powerpoint-backgrounds.jpg);
+    background: url("http://www.pptbackgrounds.org/uploads/earth-tones-antique-paper-powerpoint-backgrounds.jpg");
     background-size: auto;
   }
 
