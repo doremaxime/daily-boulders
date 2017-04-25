@@ -14,11 +14,6 @@ body {
   font-family: 'Raleway', sans-serif;
   text-align: center;
   color: $font-black;
-
-  // min-height: 100%;
-  // min-width: 100%;
-  // max-width: 2500px;
-  // max-height: 1500px;
 }
 
 #sign-in-primary-button {
@@ -85,10 +80,6 @@ body {
   min-height: 750px;
 }
 
-// .text-center {
-//   text-align: center;
-// }
-
 .crud-container {
   display: none;
 }
@@ -113,6 +104,10 @@ th.text-center {
   font-family: 'Raleway', sans-serif;
 }
 
+td {
+  text-align: left;
+}
+
 .table {
   background-color: rgba(255, 255, 255, .8);
   border-right: 7px solid #bed5cd;
@@ -129,7 +124,6 @@ th.text-center {
   height: 600px;
   width: 50%;
 }
-
 
 .update-delete-container {
   display: none;

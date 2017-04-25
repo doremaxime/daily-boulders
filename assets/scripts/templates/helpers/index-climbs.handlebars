@@ -16,8 +16,8 @@
             <form class="update-climb"  data-climb="{{climb.id}}">
               <fieldset>
                 <input class="clear-input-update" type="date" name="climb[date]"><br><br>
-                <select  class="btn btn-secondary dropdown-toggle" type="button" name="climb[grade]" id="dropdownMenuButtonUpdate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <option></option>
+                <select  class="btn btn-secondary dropdown-toggle" type="button" name="climb[grade]"  id="dropdownMenuButtonUpdate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <option value = "{{climb.grade}}">{{climb.grade}}</option>
                   <option value = "V0">V0</option>
                   <option value = "V1">V1</option>
                   <option value = "V2">V2</option>
