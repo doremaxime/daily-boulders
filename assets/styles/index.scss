@@ -28,22 +28,22 @@ body {
 
 #change-password-primary-button {
   display: none;
-  float: right;
-  margin-right: 104%;
+  position: fixed;
+  right: 0;
+  top: 0px;
 }
 
 #sign-out-button {
-  clear: both;
-  margin-top: 5px;
   display: none;
-  float: right;
-  margin-right: 104%;
+  position: fixed;
+  right: 0;
+  top: 35px;
 }
 
 #create-climb-primary-button {
   display: none;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -89,7 +89,7 @@ body {
   border-bottom: 7px solid #bed5cd;
   font-size: 17px;
   margin: auto;
-  height: 600px;
+  height: 700px;
   width: 50%;
   overflow-y: scroll;
 }
@@ -142,9 +142,14 @@ td {
     max-width: 300px;
   }
 
-  .index,
   .table-head {
     width: 100%;
+  }
+
+  .index {
+    height: 512px;
+    width: 100%;
+    margin: auto;
   }
 
   h3 {
@@ -164,8 +169,8 @@ td {
   }
 
   #create-climb-primary-button {
-    margin-top: -20px;
-    margin-bottom: 10px;
+    margin-top: 35px;
+    margin-bottom: 15px;
   }
 
   tbody {
