@@ -15,6 +15,7 @@
             </div>
             <form class="update-climb"  data-climb="{{climb.id}}">
               <fieldset>
+                <br>
                 <input class="clear-input-update" type="date" name="climb[date]"><br><br>
                 <select  class="btn btn-secondary dropdown-toggle" type="button" name="climb[grade]"  id="dropdownMenuButtonUpdate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <option value = "{{climb.grade}}">{{climb.grade}}</option>
@@ -65,6 +66,8 @@
                   <option value = "V16">V16</option>
                   <option value = "V16+">V16+</option>
                 </select>
+                <br>
+                <br>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   <input data-id="{{climb.id}}" type="submit" class="btn update btn-primary" name="submit" value="Submit">
@@ -84,8 +87,9 @@
                 <h4 class="modal-title" id="destroyClimbModalLabel">Are you sure?</h4>
               </div>
               <div>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Nope</button>
-                <input data-id="{{climb.id}}" type="submit" class="btn destroy btn-primary" name="submit" value="Yaaaasss"><br><br>
+                <br>
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <input data-id="{{climb.id}}" type="submit" class="btn destroy btn-primary" name="submit" value="Yes"><br><br>
               </div>
             </div>
           </div>
