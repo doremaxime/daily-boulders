@@ -10,6 +10,7 @@ $(() => {
   setAPIOrigin(location, config);
   authEvents.addHandlers();
   crudEvents.addHandlers();
+  $('.no-fouc').removeClass('no-fouc')
 });
 
 // use require with a reference to bundle the file and use it in this file
